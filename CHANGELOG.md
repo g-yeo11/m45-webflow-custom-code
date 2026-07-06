@@ -13,6 +13,27 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-06
 
+### Added whitepaper sharing pages documentation
+
+Summary:
+
+- Added a dedicated guide explaining how each whitepaper should have its own real Webflow page or CMS item for clean LinkedIn, WhatsApp, and direct-link sharing.
+- Documented recommended CMS fields, URL structure, Open Graph requirements, share-button behaviour, migration steps, and QA checks.
+
+Files changed:
+
+- `README.md`
+- `CHANGELOG.md`
+- `docs/WHITEPAPER_SHARING_PAGES.md`
+
+Webflow actions:
+
+- None for this documentation-only entry.
+
+Verification:
+
+- Confirmed the new guide is linked from `README.md`.
+
 ### Created documentation source of truth
 
 Summary:
@@ -180,4 +201,3 @@ Webflow actions:
 Verification:
 
 - Visual review in Webflow Designer, Webflow preview, and production pages.
-

@@ -176,5 +176,4 @@ Important social preview note:
 
 - Social platforms scrape metadata from the URL being shared.
 - JavaScript-created page changes are often ignored by social crawlers.
-- For paper-specific LinkedIn and WhatsApp previews, real Webflow CMS detail pages are the best long-term solution.
-
+- For paper-specific LinkedIn and WhatsApp previews, real Webflow CMS detail pages are the best long-term solution. See `docs/WHITEPAPER_SHARING_PAGES.md`.

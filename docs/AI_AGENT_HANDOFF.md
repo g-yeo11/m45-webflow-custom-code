@@ -52,6 +52,7 @@ Best path:
 - Create real Webflow CMS detail pages for papers.
 - Give each page its own title, meta description, and Open Graph image.
 - Share those canonical pages instead of JavaScript redirect routes.
+- Follow `docs/WHITEPAPER_SHARING_PAGES.md`.
 
 ## Verification Priorities
 
@@ -70,4 +71,3 @@ The site owner is visual and detail-oriented. When reporting results:
 - State what was verified.
 - Mention any limitation plainly.
 - Keep the answer concise.
-

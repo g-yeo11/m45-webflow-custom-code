@@ -145,3 +145,4 @@ Use the current JavaScript share routes if:
 - The goal is fast sharing from the existing Research & Insights page.
 - Perfect social preview cards are not mandatory.
 
+For the recommended full setup, follow `docs/WHITEPAPER_SHARING_PAGES.md`.
