@@ -133,6 +133,7 @@ Known custom-code responsibilities:
 
 - Most Research & Insights page behaviour is in `m45-site.js`.
 - See `docs/RESEARCH_INSIGHTS.md`.
+- Visual and animation parity should follow `docs/VISUAL_STYLE_AND_ANIMATIONS.md`.
 
 ## Shared Components
 
@@ -194,4 +195,3 @@ Expected content:
 Expected design:
 
 - Match the footer dimensions, typography, spacing, and colour treatment used on `What We Do`.
-

@@ -28,6 +28,7 @@ When `m45-site.js` changes, commit and push to `main`, then update the `v=` quer
 - [Changelog](CHANGELOG.md)
 - [Site Architecture](docs/SITE_ARCHITECTURE.md)
 - [Custom Code Reference](docs/CUSTOM_CODE_REFERENCE.md)
+- [Visual Style & Animation Guide](docs/VISUAL_STYLE_AND_ANIMATIONS.md)
 - [Research & Insights Guide](docs/RESEARCH_INSIGHTS.md)
 - [Whitepaper Sharing Pages Guide](docs/WHITEPAPER_SHARING_PAGES.md)
 - [Webflow Editing Runbook](docs/WEBFLOW_EDITING_RUNBOOK.md)

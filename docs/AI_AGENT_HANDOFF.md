@@ -8,7 +8,8 @@ This file is for future AI agents or developers working on the M45 Webflow site.
 2. `CHANGELOG.md`
 3. `docs/SITE_ARCHITECTURE.md`
 4. `docs/CUSTOM_CODE_REFERENCE.md`
-5. The current `m45-site.js`
+5. `docs/VISUAL_STYLE_AND_ANIMATIONS.md`
+6. The current `m45-site.js`
 
 ## Current Important Facts
 
@@ -44,6 +45,7 @@ Look at:
 - Research animation parity block
 - Desktop PDF modal block
 - Share tools block
+- `docs/VISUAL_STYLE_AND_ANIMATIONS.md`
 
 ### Improve social preview cards
 

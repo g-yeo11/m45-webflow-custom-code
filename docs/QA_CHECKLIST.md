@@ -20,6 +20,8 @@ For each page:
 - `Research & Insights` appears exactly once.
 - Current page has an underline.
 - Hovering nav labels shows an underline.
+- Page-load animation feels consistent with `What We Do`.
+- First-scroll reveal timing feels consistent with `What We Do`.
 - `Get In Touch` hover animation matches other pages.
 - `Get In Touch` opens the side panel.
 - Contact panel content and map behaviour work.
@@ -35,6 +37,7 @@ Check at mobile width or on a phone:
 - Mobile arrows stay at the top of each menu item.
 - `Research & Insights` appears exactly once.
 - `Get in Touch` and email/address content appear correctly.
+- Mobile menu open/close animation matches the other pages.
 
 ## What We Do
 
@@ -121,4 +124,3 @@ const paths = ['/our-investment-philosophy','/newsroom','/research-insights','/w
 })();
 '@ | & $node -
 ```
-

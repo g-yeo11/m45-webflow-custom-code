@@ -13,6 +13,30 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-06
 
+### Added visual style and animation documentation
+
+Summary:
+
+- Added a dedicated guide for page visuals, typography, layout rhythm, nav behaviour, mobile menu behaviour, page-load animation, scroll reveals, tab transitions, contact panel animation, PDF modal treatment, and footer consistency.
+- Documented `What We Do` as the primary visual reference page for matching new or rebuilt pages.
+
+Files changed:
+
+- `README.md`
+- `CHANGELOG.md`
+- `docs/VISUAL_STYLE_AND_ANIMATIONS.md`
+- `docs/AI_AGENT_HANDOFF.md`
+- `docs/QA_CHECKLIST.md`
+- `docs/SITE_ARCHITECTURE.md`
+
+Webflow actions:
+
+- None for this documentation-only entry.
+
+Verification:
+
+- Confirmed the new guide is linked from `README.md`.
+
 ### Added whitepaper sharing pages documentation
 
 Summary:
