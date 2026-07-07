@@ -83,6 +83,23 @@ git push
 https://www.m45capital.com/research-insights?verify=YYYYMMDDHHMM
 ```
 
+For Research & Insights, also test the Webflow Designer preview:
+
+1. Open `Research & Insights` in Webflow Designer.
+2. Click Preview.
+3. Switch on `Enable custom code?` if it is not already on.
+4. Confirm the preview shows the canonical Research page:
+   - featured teaser in the left panel
+   - featured `Share`
+   - `All / Whitepapers / Value-Chain / Company / Others`
+   - only `The M45 Way`, `Global Luxury`, and `AI Foundation Models`
+
+Note:
+
+- Webflow pure Design mode does not reliably execute global footer custom code.
+- If pure Design mode shows old fallback cards, verify Preview before assuming production is broken.
+- If the static Designer fallback must match exactly, edit the native Webflow elements manually as a separate Designer task.
+
 ## Publishing A Webflow-Only Change
 
 1. Make the change in Webflow Designer or CMS.

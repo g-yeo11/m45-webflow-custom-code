@@ -118,11 +118,10 @@ https://www.m45capital.com/ai-foundation-models
 
 1. Upload the PDF to Webflow assets.
 2. Copy the Webflow CDN URL.
-3. Add the document to the `docs` array in `m45-site.js`.
+3. Add the document to the `RESEARCH_DOCS` array in `m45-site.js`.
 4. If it needs a clean share route, add the route to:
-   - `paperRedirects`
-   - the `D` share metadata object
-   - the route map inside the share tools
+   - `PAPER_REDIRECTS`
+   - the `pagePath` field in the relevant `RESEARCH_DOCS` item
 5. Run the JavaScript syntax check.
 6. Commit and push.
 7. Regenerate `webflow-footer-inline-full.html`, paste it into Webflow Footer Code, and publish.
@@ -136,11 +135,31 @@ The featured paper is currently `The M45 Way`.
 
 To change the featured paper:
 
-- Update `pdfUrl`.
-- Update the `.ri-feature-art` teaser content in `patch()`.
-- Update the `.ri-feature-copy .ri-meta` text.
-- Update the featured title and body in Webflow if the base page markup uses static fallback copy.
+- Move the desired paper to the first item in `RESEARCH_DOCS`, or update all `RESEARCH_DOCS[0]` assumptions in `m45-site.js`.
+- Update `FEATURE_TEASER`.
+- Update the paper PDF URL, title, month, category, summary, slug, and page path.
 - Test both desktop and mobile.
+
+## Webflow Designer Vs Preview
+
+The Research page has old static fallback markup inside Webflow Designer, using classes such as:
+
+- `research-main-native`
+- `research-feature-native`
+- `research-feature-art`
+- `research-feature-copy`
+- `research-controls-native`
+- `research-grid-native`
+
+The live and previewed page is normalized by the canonical renderer in `m45-site.js`.
+
+Important:
+
+- Webflow pure Design mode may still show the static fallback before custom code runs.
+- Webflow Preview mode with `Enable custom code?` switched on should show the actual page state.
+- The canonical renderer detects the public `/research-insights` path and the Webflow Designer page id `6a45c8c48cc62e907de14ae2`.
+- If Designer Preview does not match production, first check whether `Enable custom code?` is on.
+- If pure Design mode must visually match without preview, rebuild the native Webflow elements manually to mirror `RESEARCH_DOCS`.
 
 ## PDF Viewing Behaviour
 

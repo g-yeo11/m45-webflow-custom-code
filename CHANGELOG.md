@@ -13,6 +13,48 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-07
 
+### Consolidated Research & Insights into one canonical renderer
+
+Summary:
+
+- Replaced the layered Research & Insights patch stack with one canonical Webflow-owned script in `m45-site.js`.
+- The renderer now targets both the published `ri-*` structure and Webflow's native Designer `research-*` structure.
+- Restored the featured `The M45 Way` teaser, featured `Share` action, new document taxonomy, and three-paper inventory deterministically.
+- Removed the old placeholder cards from the rendered page:
+  - `Private Markets Outlook`
+  - `Public Markets Review`
+  - `Portfolio Construction Framework`
+  - `M45 Platform Overview`
+- Normalized the nav so each page gets exactly one `Research & Insights` link.
+- Documented the important Webflow distinction: pure Design mode can show static native fallback content, while Preview mode with `Enable custom code?` shows the actual site behaviour.
+
+Files changed:
+
+- `m45-site.js`
+- `webflow-footer-inline-full.html`
+- `CHANGELOG.md`
+- `docs/RESEARCH_INSIGHTS.md`
+- `docs/WEBFLOW_EDITING_RUNBOOK.md`
+
+Webflow actions:
+
+- Pasted the regenerated `webflow-footer-inline-full.html` into global Footer Code.
+- Saved Webflow custom code.
+- Published staging and production.
+- Verified Webflow Designer Preview with `Enable custom code?` switched on.
+
+Verification:
+
+- Ran `node --check m45-site.js`.
+- Confirmed production HTML contains `canonical-research-native-sync`, `m45-research-canonical`, the long featured teaser, and no GitHub loader.
+- Confirmed rendered production has:
+  - one featured share button
+  - tabs `All`, `Whitepapers`, `Value-Chain`, `Company`, `Others`
+  - cards `The M45 Way`, `Global Luxury`, `AI Foundation Models`
+  - no old placeholder documents
+  - exactly one `Research & Insights` nav link
+- Confirmed Webflow Preview canvas text contains the same teaser, share action, filters, and cards.
+
 ### Moved live custom code back into Webflow Footer Code
 
 Summary:

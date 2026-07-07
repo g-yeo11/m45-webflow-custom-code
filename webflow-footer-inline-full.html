@@ -1,27 +1,639 @@
-﻿<!-- M45 Webflow-owned custom behaviour; 2026-07-07 inline-one-script-feature-share. Source files are maintained in the local documentation repo. -->
+﻿<!-- M45 Webflow-owned custom behaviour; 2026-07-07 canonical-research-native-sync. Source files are maintained in the local documentation repo. -->
 <script>
-/* M45 Capital Partners Webflow custom behaviours. Generated from footer_code_direct_pdf.html on 2026-07-06. */
-(function(){var paperRedirects={"/the-m45-way":"/research-insights?paper=the-m45-way","/global-luxury":"/research-insights?paper=global-luxury","/ai-foundation-models":"/research-insights?paper=ai-foundation-models"};var paperPath=location.pathname.replace(/\/$/,"")||"/";if(paperRedirects[paperPath]){location.replace(paperRedirects[paperPath]);return;}if(location.pathname!=="/research-insights")return;var pdfUrl="https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a47340002795540f3ec82d7_2026%2006%20-%20The%20M45%20Way%2C%20responsible%20for%20the%20whole%20(M45%20Fundamental%20Research).pdf";var docs=[["Whitepapers","The M45 Way","Responsible for the whole. Our investment philosophy for long-term capital.","June 2026",pdfUrl],["Value-Chain","Global Luxury","The business of saying no. A value-chain lens on scarcity, pricing power and discipline across global luxury.","May 2026","https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a475dfd5a4e97910bd49371_2026%2005%20-%20Global%20Luxury%2C%20the%20business%20of%20saying%20no%20(M45%20Fundamental%20Research).pdf"],["Value-Chain","AI Foundation Models","Where physics does the pricing. A value-chain view of compute, infrastructure and model economics.","April 2026","https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a475dfdf2edbbeda162a23f_2026%2004%20-%20AI%20Foundation%20Models%2C%20where%20physics%20does%20the%20pricing%20(M45%20Fundamental%20Research).pdf"]];function card(d){var ready=!!d[4];return'<article class="ri-card" data-type="'+d[0]+'"><div><div class="ri-icon"></div><h3>'+d[1]+'</h3><p>'+d[2]+'</p></div><div class="ri-card-foot"><span class="ri-meta">'+d[0]+' - '+d[3]+'</span><a class="'+(ready?'':'ri-link-disabled')+'" href="'+(ready?d[4]:'#')+'">'+(ready?'View PDF':'PDF pending')+'</a></div></article>';}function bindFilters(){Array.prototype.forEach.call(document.querySelectorAll(".ri-filter"),function(btn){btn.onclick=function(){Array.prototype.forEach.call(document.querySelectorAll(".ri-filter"),function(b){b.classList.remove("active");});btn.classList.add("active");var f=btn.getAttribute("data-filter");Array.prototype.forEach.call(document.querySelectorAll(".ri-card"),function(c){c.classList.toggle("hide",f!=="All"&&c.getAttribute("data-type")!==f);});};});}function bindPdfProxy(){var feature=document.querySelector('.ri-feature-copy a[href="'+pdfUrl+'"]');Array.prototype.forEach.call(document.querySelectorAll('.ri-grid a[href="'+pdfUrl+'"]'),function(link){if(link.dataset.riDocPatch)return;link.dataset.riDocPatch="1";link.addEventListener("click",function(e){if(feature&&feature!==link){e.preventDefault();feature.click();}},true);});}function patch(){if(!document.body.classList.contains("ri-page")||!document.querySelector(".ri-grid")){setTimeout(patch,80);return;}if(!document.getElementById("ri-doc-taxonomy-patch")){var style=document.createElement("style");style.id="ri-doc-taxonomy-patch";style.textContent='body.ri-page .ri-feature-art{display:flex!important;min-height:300px!important;padding:44px!important;flex-direction:column!important;justify-content:flex-end!important;align-items:flex-start!important;background:#f4f7f9!important}body.ri-page .ri-feature-art:before{display:none!important}body.ri-page .ri-feature-teaser-label{margin-bottom:20px!important;font-family:"Zen Kaku Gothic Antique",sans-serif!important;color:#292f40!important;font-size:12px!important;line-height:1.7!important;font-weight:500!important;letter-spacing:.32em!important;text-transform:uppercase!important}body.ri-page .ri-feature-teaser-body{max-width:430px!important;margin:0!important;color:#4d5360!important;font-size:17.5px!important;line-height:25.375px!important}body.ri-page .ri-link-disabled{color:#9aa0aa!important;pointer-events:none!important;cursor:default!important}@media(max-width:767px){body.ri-page .ri-feature-art{min-height:220px!important;padding:25px!important}body.ri-page .ri-feature-teaser-body{font-size:15px!important;line-height:22px!important}}';document.head.appendChild(style);}var art=document.querySelector(".ri-feature-art");if(art){art.innerHTML='<div class="ri-feature-teaser-label">The M45 Way</div><p class="ri-feature-teaser-body">A short note on how we think about investing. It comes out of thirty years across asset classes, strategies and markets, through good runs and bad ones, managing money for institutions and for families, often alongside some of the best investors in their part of the world. One lesson kept coming back. Left to itself, a portfolio drifts into a collection: a bit of this, a bit of that, and one risk quietly running everything underneath. We&#39;d rather build it on purpose. Here&#39;s the thinking.</p>';}var meta=document.querySelector(".ri-feature-copy .ri-meta");if(meta)meta.textContent="Whitepapers - June 2026";var featureLink=document.querySelector(".ri-feature-copy a");if(featureLink){featureLink.href=pdfUrl;featureLink.innerHTML="View PDF <span>-></span>";}var controls=document.querySelector(".ri-controls");if(controls){controls.innerHTML='<button class="ri-filter active" data-filter="All">All</button><button class="ri-filter" data-filter="Whitepapers">Whitepapers</button><button class="ri-filter" data-filter="Value-Chain">Value-Chain</button><button class="ri-filter" data-filter="Company">Company</button><button class="ri-filter" data-filter="Others">Others</button>';}var grid=document.querySelector(".ri-grid");if(grid)grid.innerHTML=docs.map(card).join("");bindFilters();bindPdfProxy();}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",patch);else patch();setTimeout(patch,250);setTimeout(patch,900);setTimeout(patch,1800);})();
-;
-(function(){if(location.pathname!=="/research-insights")return;function i(){var s=document.getElementById("ri-action-parity-head-20260704-style");if(!s){s=document.createElement("style");s.id="ri-action-parity-head-20260704-style";document.head.appendChild(s)}s.textContent='body.ri-page .ri-grid{transition:opacity .22s ease-out,transform .22s cubic-bezier(.39,.575,.565,1)!important}body.ri-page .ri-grid.ri-filtering{opacity:.2!important;transform:translateY(8px)!important}@media(max-width:900px){body.ri-page .ri-links{transition:transform .4s cubic-bezier(.39,.575,.565,1)!important}}';if(!document.documentElement.dataset.riActionParityHead){document.documentElement.dataset.riActionParityHead="1";document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".ri-filter");if(!b)return;var g=document.querySelector(".ri-grid");if(!g)return;g.classList.add("ri-filtering");setTimeout(function(){g.classList.remove("ri-filtering")},180)},true)}}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",i);else i();[120,500,1000].forEach(function(t){setTimeout(i,t)})})();
-;
-(function(){if(location.pathname!=="/research-insights")return;function isMobile(){return window.matchMedia&&matchMedia("(max-width: 767px)").matches;}function pdfLink(target){return target&&target.closest&&target.closest('a[href*=".pdf"]');}function openDirect(link,event){if(!isMobile()||!link)return;event.preventDefault();event.stopPropagation();if(event.stopImmediatePropagation)event.stopImmediatePropagation();window.location.assign(link.href);}function intercept(event){var link=pdfLink(event.target);if(link)openDirect(link,event);}function bindLinks(){if(!isMobile())return;document.querySelectorAll('a[href*=".pdf"]').forEach(function(link){link.setAttribute("target","_self");link.setAttribute("rel","noopener");if(link.dataset.riMobilePdfDirect==="1")return;link.dataset.riMobilePdfDirect="1";link.addEventListener("touchend",function(event){openDirect(link,event);},true);link.addEventListener("pointerup",function(event){openDirect(link,event);},true);link.addEventListener("click",function(event){openDirect(link,event);},true);});}["touchend","pointerup","click"].forEach(function(type){document.addEventListener(type,intercept,true);});if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",bindLinks);else bindLinks();[120,500,1000,2200,3500].forEach(function(delay){setTimeout(bindLinks,delay);});new MutationObserver(bindLinks).observe(document.documentElement,{childList:true,subtree:true});window.addEventListener("resize",bindLinks);})();
-;
-(function(){if(location.pathname!=="/research-insights")return;function isMobile(){return window.matchMedia&&matchMedia("(max-width: 767px)").matches;}function titleFor(link){var card=link.closest(".ri-card");var feature=link.closest(".ri-feature");var title=(card&&card.querySelector("h3"))||(feature&&feature.querySelector("h2"));return title&&title.textContent.trim()?title.textContent.trim():"M45 Research";}function ensureReader(){var reader=document.getElementById("ri-pdf-reader");if(reader)return reader;reader=document.createElement("div");reader.id="ri-pdf-reader";reader.className="ri-pdf-reader";reader.setAttribute("role","dialog");reader.setAttribute("aria-modal","true");reader.setAttribute("aria-label","PDF reader");reader.innerHTML='<div class="ri-pdf-panel" role="document"><div class="ri-pdf-top"><p class="ri-pdf-title">M45 Research</p><a class="ri-pdf-open-link" href="#" target="_blank" rel="noopener">Open PDF</a><button class="ri-pdf-close" type="button" aria-label="Close PDF reader"></button></div><div class="ri-pdf-mobile-scroll" aria-live="polite"></div><iframe class="ri-pdf-frame" title="M45 Research PDF" loading="lazy"></iframe></div>';document.body.appendChild(reader);reader.addEventListener("click",function(event){if(event.target===reader||event.target.closest(".ri-pdf-close")){reader.classList.remove("is-open");document.body.classList.remove("ri-pdf-open");}});return reader;}function openModal(link,event){if(isMobile())return;event.preventDefault();event.stopPropagation();if(event.stopImmediatePropagation)event.stopImmediatePropagation();var reader=ensureReader();var url=link.href;var title=titleFor(link);var titleEl=reader.querySelector(".ri-pdf-title");var openLink=reader.querySelector(".ri-pdf-open-link");var frame=reader.querySelector(".ri-pdf-frame");var mobile=reader.querySelector(".ri-pdf-mobile-scroll");if(titleEl)titleEl.textContent=title;if(openLink)openLink.href=url;if(frame){frame.setAttribute("title",title+" PDF");frame.setAttribute("src",url+"#toolbar=1&navpanes=0&view=FitH");frame.style.display="";}if(mobile)mobile.style.display="";reader.classList.add("is-open");document.body.classList.add("ri-pdf-open");var close=reader.querySelector(".ri-pdf-close");if(close)close.focus();}function bind(){document.querySelectorAll('a[href*=".pdf"]').forEach(function(link){if(link.dataset.riDesktopPdfAllDocs==="1")return;link.dataset.riDesktopPdfAllDocs="1";link.addEventListener("click",function(event){openModal(link,event);},true);});}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",bind);else bind();[120,500,1000,2200,3500].forEach(function(delay){setTimeout(bind,delay);});new MutationObserver(bind).observe(document.documentElement,{childList:true,subtree:true});})();
-;
-(function(){var mapUrl="https://maps.app.goo.gl/w46b9ui8QfCGpLy2A?g_st=ic";function shouldPatch(link){var text=(link.textContent||"").replace(/\s+/g," ").trim().toLowerCase();var href=link.getAttribute("href")||"";return text==="locate us"||link.classList.contains("landing-contact-btn")||href.indexOf("maps.app.goo.gl/SRMuapWBmSBiK65A6")>-1;}function patch(){document.querySelectorAll("a").forEach(function(link){if(!shouldPatch(link))return;link.href=mapUrl;link.target="_blank";link.rel="noopener";});}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",patch);else patch();[120,500,1000,2200,3500].forEach(function(delay){setTimeout(patch,delay);});new MutationObserver(patch).observe(document.documentElement,{childList:true,subtree:true});})();
-;
-(function(){if(window.__m45MobileMenuArrowFix)return;window.__m45MobileMenuArrowFix=true;function isMobileMenuWidth(){return!window.matchMedia||window.matchMedia('(max-width: 991px)').matches;}function moveArrowToTop(){if(!isMobileMenuWidth())return;Array.prototype.forEach.call(document.querySelectorAll('.navbar-linkwrapper'),function(wrapper){var arrow=wrapper.querySelector('.mobilemenu-arrowdiv');if(!arrow||wrapper.firstElementChild===arrow)return;wrapper.insertBefore(arrow,wrapper.firstElementChild);});}function scheduleArrowFix(){moveArrowToTop();if(window.requestAnimationFrame)window.requestAnimationFrame(moveArrowToTop);[80,200,500,1000].forEach(function(delay){window.setTimeout(moveArrowToTop,delay);});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',scheduleArrowFix);}else{scheduleArrowFix();}document.addEventListener('click',function(event){if(event.target.closest&&event.target.closest('.w-nav-button, .navbar-menubutton, .menu-button')){scheduleArrowFix();}},true);window.addEventListener('resize',scheduleArrowFix);new MutationObserver(function(){if(isMobileMenuWidth())moveArrowToTop();}).observe(document.documentElement,{childList:true,subtree:true});})();
-;
-(function(){if(location.pathname!=="/research-insights"||window.__m45ResearchShareTools)return;window.__m45ResearchShareTools=1;var D={"the m45 way":["the-m45-way","The M45 Way","Responsible for the whole. Our investment philosophy for long-term capital."],"global luxury":["global-luxury","Global Luxury","The business of saying no. A value-chain lens on scarcity, pricing power and discipline across global luxury."],"ai foundation models":["ai-foundation-models","AI Foundation Models","Where physics does the pricing. A value-chain view of compute, infrastructure and model economics."]};function t(s){return String(s||"").trim().toLowerCase()}function slug(s){return t(s).replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}function info(x){var d=D[t(x)];return d?{slug:d[0],title:d[1],text:d[2]}:{slug:slug(x),title:x||"M45 Research",text:"Selected research from M45 Capital Partners."}}function url(i){var r={"the-m45-way":"/the-m45-way","global-luxury":"/global-luxury","ai-foundation-models":"/ai-foundation-models"};return location.origin+(r[i.slug]||("/research-insights?paper="+encodeURIComponent(i.slug)))}function title(a){var c=a.closest(".ri-card"),f=a.closest(".ri-feature"),h=(c&&c.querySelector("h3"))||(f&&f.querySelector("h2"));return h&&h.textContent.trim()||"M45 Research"}function css(){if(document.getElementById("ri-share-tools-20260706-style"))return;var s=document.createElement("style");s.id="ri-share-tools-20260706-style";s.textContent='body.ri-page .ri-feature-actions{display:flex!important;align-items:center!important;gap:28px!important;flex-wrap:wrap!important;margin-top:18px!important}body.ri-page .ri-card-actions{display:flex!important;align-items:flex-end!important;justify-content:flex-end!important;gap:20px!important;white-space:nowrap!important}body.ri-page .ri-share-btn{appearance:none!important;background:transparent!important;border:0!important;border-bottom:1px solid currentColor!important;border-radius:0!important;padding:0 0 6px!important;margin:0!important;font-family:Ovo,serif!important;font-size:17.5px!important;line-height:20px!important;color:#292f40!important;cursor:pointer!important}.ri-feature-actions .ri-share-btn{color:#f4f7f9!important;padding-bottom:8px!important}.ri-share-popover{position:fixed!important;z-index:999999!important;width:min(340px,calc(100vw - 40px))!important;background:#f7f7f5!important;border:1px solid rgba(41,47,64,.22)!important;box-shadow:0 24px 70px rgba(17,18,25,.22)!important;padding:24px!important;color:#292f40!important}.ri-share-popover[hidden]{display:none!important}.ri-share-popover-title{font-family:Ovo,serif!important;font-size:24px!important;line-height:30px!important;margin:0 0 8px!important}.ri-share-popover-text{font-family:"Zen Kaku Gothic Antique",sans-serif!important;font-size:14.5px!important;line-height:21px!important;color:#6b6f78!important;margin:0 0 22px!important}.ri-share-popover-actions{display:grid!important;gap:12px!important}.ri-share-popover button,.ri-share-popover a{font-family:"Zen Kaku Gothic Antique",sans-serif!important;font-size:12px!important;letter-spacing:.26em!important;text-transform:uppercase!important;color:#292f40!important;text-decoration:none!important;background:#fff!important;border:1px solid #dedede!important;padding:14px 16px!important;text-align:left!important;cursor:pointer!important}.ri-share-popover-close{position:absolute!important;right:12px!important;top:10px!important;border:0!important;background:transparent!important;padding:8px!important;font-size:18px!important;line-height:18px!important;letter-spacing:0!important;text-transform:none!important}@media(max-width:767px){body.ri-page .ri-feature-actions{gap:24px!important}body.ri-page .ri-card-actions{gap:18px!important}.ri-share-popover{left:18px!important;right:18px!important;bottom:18px!important;top:auto!important;width:auto!important;padding:22px!important}}';document.head.appendChild(s)}function pop(){var p=document.getElementById("ri-share-popover");if(p)return p;p=document.createElement("div");p.id="ri-share-popover";p.className="ri-share-popover";p.hidden=1;p.innerHTML='<button class="ri-share-popover-close" type="button" aria-label="Close share menu">x</button><p class="ri-share-popover-title"></p><p class="ri-share-popover-text"></p><div class="ri-share-popover-actions"><button type="button" data-ri-share-copy>Copy link</button><a data-ri-share-linkedin target="_blank" rel="noopener">LinkedIn</a><a data-ri-share-whatsapp target="_blank" rel="noopener">WhatsApp</a></div>';document.body.appendChild(p);p.querySelector(".ri-share-popover-close").onclick=function(){p.hidden=1};p.querySelector("[data-ri-share-copy]").onclick=function(){var b=this,u=p.dataset.url;navigator.clipboard?navigator.clipboard.writeText(u):0;b.textContent="Copied";setTimeout(function(){b.textContent="Copy link"},1200)};document.addEventListener("click",function(e){if(!p.hidden&&!p.contains(e.target)&&!(e.target.closest&&e.target.closest(".ri-share-btn")))p.hidden=1},true);return p}function show(b,i){var p=pop(),u=url(i),txt=i.title+" - "+i.text;p.dataset.url=u;p.querySelector(".ri-share-popover-title").textContent=i.title;p.querySelector(".ri-share-popover-text").textContent=i.text;p.querySelector("[data-ri-share-linkedin]").href="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(u);p.querySelector("[data-ri-share-whatsapp]").href="https://wa.me/?text="+encodeURIComponent(txt+" "+u);p.hidden=0;if(matchMedia("(max-width:767px)").matches)return;var r=b.getBoundingClientRect(),w=p.offsetWidth,h=p.offsetHeight;p.style.left=Math.max(18,Math.min(innerWidth-w-18,r.left-w+b.offsetWidth))+"px";p.style.top=Math.max(18,Math.min(innerHeight-h-18,r.bottom+14))+"px"}function share(b,i){var u=url(i),d={title:i.title+" | M45 Capital Partners",text:i.text,url:u};if(navigator.share&&matchMedia("(max-width:767px)").matches)navigator.share(d).catch(function(){show(b,i)});else show(b,i)}function add(a){if(a.dataset.riShareEnhanced||!a.href||a.href.indexOf(".pdf")<0||(!a.closest(".ri-card")&&!a.closest(".ri-feature")))return;a.dataset.riShareEnhanced=1;var i=info(title(a)),w=document.createElement("span"),b=document.createElement("button");a.dataset.riShareSlug=i.slug;w.className=a.closest(".ri-feature")?"ri-feature-actions":"ri-card-actions";b.type="button";b.className="ri-share-btn";b.textContent="Share";b.dataset.riShareSlug=i.slug;b.onclick=function(e){e.preventDefault();e.stopPropagation();share(b,i)};a.parentNode.insertBefore(w,a);w.appendChild(a);w.appendChild(b)}function enhance(){css();document.querySelectorAll('.ri-feature a[href*=".pdf"],.ri-card a[href*=".pdf"]').forEach(add)}function openShared(){var s=new URLSearchParams(location.search).get("paper");if(!s)return;[500,1000,1800].forEach(function(n){setTimeout(function(){var a=document.querySelector('a[data-ri-share-slug="'+s.replace(/"/g,"\\\"")+'"]');if(!a)return;var block=a.closest(".ri-card")||a.closest(".ri-feature")||a;block.scrollIntoView({behavior:"smooth",block:"center"});if(matchMedia("(max-width:767px)").matches)setTimeout(function(){location.assign(a.href)},250);else setTimeout(function(){a.click()},500)},n)})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){enhance();openShared()});else{enhance();openShared()}[120,500,1000,2200].forEach(function(n){setTimeout(enhance,n)});new MutationObserver(enhance).observe(document.documentElement,{childList:true,subtree:true})})();
-;
-(function(){if(location.pathname!=="/research-insights")return;function s(){if(document.getElementById("ri-share-icon-polish-20260706-style"))return;var e=document.createElement("style");e.id="ri-share-icon-polish-20260706-style";e.textContent='.ri-share-popover-actions{grid-template-columns:minmax(0,1fr) 54px 54px!important;align-items:stretch!important}.ri-share-popover [data-ri-share-copy]{grid-column:auto!important}.ri-share-popover .ri-share-icon{width:54px!important;height:54px!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;letter-spacing:0!important;font-family:Arial,sans-serif!important;font-weight:700!important;font-size:15px!important;text-transform:none!important;color:#292f40!important;transition:background-color .2s ease,color .2s ease,border-color .2s ease!important}.ri-share-popover .ri-share-icon:hover{background:#292f40!important;border-color:#292f40!important;color:#f4f7f9!important}@media(max-width:767px){.ri-share-popover-actions{grid-template-columns:minmax(0,1fr) 52px 52px!important}.ri-share-popover .ri-share-icon{width:52px!important;height:52px!important}}';document.head.appendChild(e)}function p(){s();document.querySelectorAll("[data-ri-share-linkedin],[data-ri-share-whatsapp]").forEach(function(a){if(a.dataset.riIconPolished)return;a.dataset.riIconPolished="1";var li=a.hasAttribute("data-ri-share-linkedin");a.classList.add("ri-share-icon");a.setAttribute("aria-label",li?"Share on LinkedIn":"Share on WhatsApp");a.setAttribute("title",li?"Share on LinkedIn":"Share on WhatsApp");a.textContent=li?"in":"wa"})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",p);else p();[120,500,1000,2200,3500].forEach(function(t){setTimeout(p,t)});new MutationObserver(p).observe(document.documentElement,{childList:true,subtree:true})})();
-;
-(function(){if(window.__m45NavCanonicalTail20260706)return;window.__m45NavCanonicalTail20260706=1;var lab="Research & Insights",href="/research-insights",names={"/our-investment-philosophy":"Our Investment Philosophy","/what-we-do":"What We Do","/our-leadership":"Our Leadership","/newsroom":"Newsroom"};function tx(n){return String(n&&n.textContent||"").replace(/\s+/g," ").trim()}function path(a){try{return new URL(a.getAttribute("href")||"",location.origin).pathname.replace(/\/$/,"")||"/"}catch(e){return""}}function isR(a){return a&&a.tagName==="A"&&tx(a).toLowerCase()===lab.toLowerCase()}function label(a){var p=path(a);if(names[p])a.textContent=names[p]}function cur(a){if(!a)return;a.href=href;a.textContent=lab;a.classList.add("m45-research-navlink");if(/\/research-insights\/?$/.test(location.pathname)){a.classList.add("w--current");a.setAttribute("aria-current","page")}else{a.classList.remove("w--current");a.removeAttribute("aria-current")}}function st(){var css='@media(min-width:992px){.navbar-linkcontainer.w-nav-menu{display:flex!important;align-items:flex-start!important}.navbar-linkcontainer.w-nav-menu .navbar-linkwrapper{display:inline-flex!important;white-space:nowrap!important;margin-right:0!important}.navbar-linkcontainer.w-nav-menu .navlink,.navbar-linkcontainer.w-nav-menu .m45-research-navlink,.navbar-contactus-container .contactus-btn,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email),.ri-nav .ri-wd-contact.linebtn.arrowleftbtn{font-family:Ovo,sans-serif!important;font-size:18.375px!important;line-height:25.375px!important;font-weight:400!important;letter-spacing:0!important;text-decoration:none!important}.navbar-linkcontainer.w-nav-menu .navlink,.navbar-linkcontainer.w-nav-menu .m45-research-navlink,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email){padding:8px 0!important;border-bottom:1px solid transparent!important}.navbar-linkcontainer.w-nav-menu .navlink:hover,.navbar-linkcontainer.w-nav-menu .navlink.w--current,.navbar-linkcontainer.w-nav-menu .m45-research-navlink:hover,.navbar-linkcontainer.w-nav-menu .m45-research-navlink.w--current,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email):hover,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email).active,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email).w--current{border-bottom-color:currentColor!important}body.ri-page .ri-nav{padding-left:70px!important;padding-right:70px!important;gap:65px!important}body.ri-page .ri-links{display:flex!important;flex-wrap:nowrap!important;gap:45px!important;align-items:flex-start!important;padding-top:8px!important;white-space:nowrap!important}body.ri-page .ri-contact-wrap{padding-top:8px!important;margin-left:auto!important}}';var s=document.getElementById("m45-nav-canonical-tail-20260706-style");if(!s){s=document.createElement("style");s.id="m45-nav-canonical-tail-20260706-style";document.head.appendChild(s)}s.textContent=css;if(document.head.lastElementChild!==s)document.head.appendChild(s)}function std(menu){var links=[].slice.call(menu.querySelectorAll("a"));links.forEach(label);var rs=links.filter(isR);rs.forEach(function(a){if(a.classList.contains("mobilemenu-arrowdiv")){a.remove()}});rs=[].slice.call(menu.querySelectorAll("a")).filter(isR);var keep=rs[0];rs.slice(1).forEach(function(a){a.remove()});if(!keep){var news=[].slice.call(menu.querySelectorAll("a")).find(function(a){return path(a)==="/newsroom"}),src=[].slice.call(menu.querySelectorAll("a.navlink")).find(function(a){return path(a)!=="#"})||news,wrap=(news&&news.parentElement)||menu.querySelector(".navbar-linkwrapper")||menu;keep=document.createElement("a");keep.className=((src&&src.className)||"navlink w-nav-link")+" m45-research-navlink";if(src&&src.getAttribute("style"))keep.setAttribute("style",src.getAttribute("style"));if(news)news.insertAdjacentElement("afterend",keep);else wrap.appendChild(keep)}cur(keep)}function ri(menu){var links=[].slice.call(menu.querySelectorAll("a"));var rs=links.filter(isR),keep=rs[0];rs.slice(1).forEach(function(a){a.remove()});if(!keep){var news=links.find(function(a){return tx(a).toLowerCase()==="newsroom"});keep=document.createElement("a");if(news)news.insertAdjacentElement("afterend",keep);else menu.appendChild(keep)}cur(keep)}function run(){st();document.querySelectorAll(".navbar-linkcontainer.w-nav-menu").forEach(std);var r=document.querySelector(".ri-nav .ri-links");if(r)ri(r)}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();[80,250,600,1200,2400,4200].forEach(function(n){setTimeout(run,n)});new MutationObserver(function(){requestAnimationFrame(run)}).observe(document.documentElement,{childList:true,subtree:true})})();
+/* M45 Capital Partners Webflow custom behaviours. Webflow-owned inline bundle, 2026-07-07. */
+(function () {
+  "use strict";
 
-/* Final Research & Insights featured-card recovery. Kept inside the main Webflow footer script so Webflow only needs to preserve one script tag. */
-(function(){if(location.pathname.replace(/\/$/,"")!=="/research-insights"||window.__m45WebflowFeaturedResearchPatch20260707)return;window.__m45WebflowFeaturedResearchPatch20260707=1;var pdfUrl="https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a47340002795540f3ec82d7_2026%2006%20-%20The%20M45%20Way%2C%20responsible%20for%20the%20whole%20(M45%20Fundamental%20Research).pdf",paperUrl=location.origin+"/the-m45-way",shareText="Responsible for the whole. Our investment philosophy for long-term capital.",teaser="A short note on how we think about investing. It comes out of thirty years across asset classes, strategies and markets, through good runs and bad ones, managing money for institutions and for families, often alongside some of the best investors in their part of the world. One lesson kept coming back. Left to itself, a portfolio drifts into a collection: a bit of this, a bit of that, and one risk quietly running everything underneath. We'd rather build it on purpose. Here's the thinking.";function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}function style(){if(document.getElementById("m45-featured-research-final-style"))return;var s=document.createElement("style");s.id="m45-featured-research-final-style";s.textContent='.research-feature-art,.ri-feature-art{display:flex!important;min-height:300px!important;padding:44px!important;flex-direction:column!important;justify-content:flex-end!important;align-items:flex-start!important;background:#f4f7f9!important;overflow:hidden!important}.research-feature-art:before,.ri-feature-art:before{display:none!important}.m45-featured-teaser-label{margin-bottom:20px!important;font-family:"Zen Kaku Gothic Antique",sans-serif!important;color:#292f40!important;font-size:12px!important;line-height:1.7!important;font-weight:500!important;letter-spacing:.32em!important;text-transform:uppercase!important}.m45-featured-teaser-body{max-width:430px!important;margin:0!important;color:#4d5360!important;font-family:"Zen Kaku Gothic Antique",sans-serif!important;font-size:17.5px!important;line-height:25.375px!important;font-weight:400!important}.m45-feature-actions{display:flex!important;align-items:center!important;gap:28px!important;flex-wrap:wrap!important;margin-top:18px!important}.m45-feature-share{appearance:none!important;background:transparent!important;border:0!important;border-bottom:1px solid currentColor!important;border-radius:0!important;padding:0 0 8px!important;margin:0!important;font-family:Ovo,serif!important;font-size:17.5px!important;line-height:20px!important;color:#f4f7f9!important;cursor:pointer!important}.m45-feature-share-popover{position:fixed!important;z-index:999999!important;width:min(340px,calc(100vw - 40px))!important;background:#f7f7f5!important;border:1px solid rgba(41,47,64,.22)!important;box-shadow:0 24px 70px rgba(17,18,25,.22)!important;padding:24px!important;color:#292f40!important}.m45-feature-share-popover[hidden]{display:none!important}.m45-feature-share-popover-title{font-family:Ovo,serif!important;font-size:24px!important;line-height:30px!important;margin:0 0 8px!important}.m45-feature-share-popover-text{font-family:"Zen Kaku Gothic Antique",sans-serif!important;font-size:14.5px!important;line-height:21px!important;color:#6b6f78!important;margin:0 0 22px!important}.m45-feature-share-popover-actions{display:grid!important;grid-template-columns:minmax(0,1fr) 54px 54px!important;gap:12px!important}.m45-feature-share-popover button,.m45-feature-share-popover a{font-family:"Zen Kaku Gothic Antique",sans-serif!important;font-size:12px!important;letter-spacing:.26em!important;text-transform:uppercase!important;color:#292f40!important;text-decoration:none!important;background:#fff!important;border:1px solid #dedede!important;padding:14px 16px!important;text-align:left!important;cursor:pointer!important}.m45-feature-share-popover .m45-feature-share-icon{width:54px!important;height:54px!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:center!important;letter-spacing:0!important;font-family:Arial,sans-serif!important;font-weight:700!important;text-transform:none!important}@media(max-width:767px){.research-feature-art,.ri-feature-art{height:auto!important;min-height:0!important;padding:30px 25px!important;justify-content:flex-start!important;overflow:visible!important}.m45-featured-teaser-label{margin-bottom:16px!important;font-size:11px!important;line-height:1.6!important}.m45-featured-teaser-body{max-width:none!important;font-size:14px!important;line-height:21px!important}.m45-feature-share-popover{left:18px!important;right:18px!important;bottom:18px!important;top:auto!important;width:auto!important}.m45-feature-share-popover-actions{grid-template-columns:minmax(0,1fr) 52px 52px!important}.m45-feature-share-popover .m45-feature-share-icon{width:52px!important;height:52px!important}}';document.head.appendChild(s)}function pop(btn){var p=document.getElementById("m45-feature-share-popover");if(!p){p=document.createElement("div");p.id="m45-feature-share-popover";p.className="m45-feature-share-popover";p.hidden=1;p.innerHTML='<button type="button" aria-label="Close share menu" style="position:absolute;right:12px;top:10px;border:0;background:transparent;padding:8px;font-size:18px;line-height:18px;cursor:pointer">x</button><p class="m45-feature-share-popover-title">The M45 Way</p><p class="m45-feature-share-popover-text">'+esc(shareText)+'</p><div class="m45-feature-share-popover-actions"><button type="button" data-copy>Copy link</button><a class="m45-feature-share-icon" data-linkedin target="_blank" rel="noopener" aria-label="Share on LinkedIn">in</a><a class="m45-feature-share-icon" data-whatsapp target="_blank" rel="noopener" aria-label="Share on WhatsApp">wa</a></div>';document.body.appendChild(p);p.querySelector("[aria-label='Close share menu']").onclick=function(){p.hidden=1};p.querySelector("[data-copy]").onclick=function(){var b=this;if(navigator.clipboard)navigator.clipboard.writeText(paperUrl);b.textContent="Copied";setTimeout(function(){b.textContent="Copy link"},1200)}}p.querySelector("[data-linkedin]").href="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(paperUrl);p.querySelector("[data-whatsapp]").href="https://wa.me/?text="+encodeURIComponent("The M45 Way - "+shareText+" "+paperUrl);p.hidden=0;if(matchMedia("(max-width:767px)").matches)return;var r=btn.getBoundingClientRect(),w=p.offsetWidth,h=p.offsetHeight;p.style.left=Math.max(18,Math.min(innerWidth-w-18,r.left-w+btn.offsetWidth))+"px";p.style.top=Math.max(18,Math.min(innerHeight-h-18,r.bottom+14))+"px"}function patch(){style();var feature=document.querySelector(".research-feature-native,.ri-feature"),art=document.querySelector(".research-feature-art,.ri-feature-art");if(!feature&&art)feature=art.closest("section,div");if(!feature&&!art)return;if(art&&art.textContent.indexOf("A short note on how we think about investing")<0)art.innerHTML='<div class="m45-featured-teaser-label">The M45 Way</div><p class="m45-featured-teaser-body">'+esc(teaser)+"</p>";var copy=document.querySelector(".research-feature-copy,.ri-feature-copy");if(!copy&&feature)copy=feature.querySelector(".research-feature-copy,.ri-feature-copy")||feature;if(!copy)return;var meta=copy.querySelector(".research-meta,.ri-meta");if(meta)meta.textContent="Whitepapers - June 2026";var links=[].slice.call(copy.querySelectorAll("a")),view=links.find(function(a){return /view pdf/i.test(a.textContent||"")})||copy.querySelector('a[href*=".pdf"]');if(!view)return;view.href=pdfUrl;view.innerHTML="View PDF <span>-></span>";var wrap=view.closest(".m45-feature-actions,.ri-feature-actions,.research-feature-actions");if(!wrap){wrap=document.createElement("span");wrap.className="m45-feature-actions ri-feature-actions";view.parentNode.insertBefore(wrap,view);wrap.appendChild(view)}var share=wrap.querySelector(".m45-feature-share");if(!share){share=document.createElement("button");share.type="button";share.className="m45-feature-share ri-share-btn";share.textContent="Share";wrap.appendChild(share)}share.onclick=function(e){e.preventDefault();e.stopPropagation();if(navigator.share&&matchMedia("(max-width:767px)").matches)navigator.share({title:"The M45 Way | M45 Capital Partners",text:shareText,url:paperUrl}).catch(function(){pop(share)});else pop(share)}}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",patch);else patch();[50,150,300,700,1200,1800,2800,4500,7000].forEach(function(d){setTimeout(patch,d)});var tries=0,timer=setInterval(function(){patch();tries++;if(tries>40)clearInterval(timer)},500);new MutationObserver(function(){requestAnimationFrame(patch)}).observe(document.documentElement,{childList:true,subtree:true})})();
+  var RESEARCH_PAGE_ID = "6a45c8c48cc62e907de14ae2";
+  var PRODUCTION_ORIGIN = "https://www.m45capital.com";
+  var MAP_URL = "https://maps.app.goo.gl/w46b9ui8QfCGpLy2A?g_st=ic";
 
+  var FEATURE_TEASER =
+    "A short note on how we think about investing. It comes out of thirty years across asset classes, strategies and markets, through good runs and bad ones, managing money for institutions and for families, often alongside some of the best investors in their part of the world. One lesson kept coming back. Left to itself, a portfolio drifts into a collection: a bit of this, a bit of that, and one risk quietly running everything underneath. We'd rather build it on purpose. Here's the thinking.";
 
+  var RESEARCH_DOCS = [
+    {
+      type: "Whitepapers",
+      slug: "the-m45-way",
+      pagePath: "/the-m45-way",
+      title: "The M45 Way",
+      summary: "Responsible for the whole. Our investment philosophy for long-term capital.",
+      month: "June 2026",
+      pdfUrl:
+        "https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a47340002795540f3ec82d7_2026%2006%20-%20The%20M45%20Way%2C%20responsible%20for%20the%20whole%20(M45%20Fundamental%20Research).pdf",
+    },
+    {
+      type: "Value-Chain",
+      slug: "global-luxury",
+      pagePath: "/global-luxury",
+      title: "Global Luxury",
+      summary:
+        "The business of saying no. A value-chain lens on scarcity, pricing power and discipline across global luxury.",
+      month: "May 2026",
+      pdfUrl:
+        "https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a475dfd5a4e97910bd49371_2026%2005%20-%20Global%20Luxury%2C%20the%20business%20of%20saying%20no%20(M45%20Fundamental%20Research).pdf",
+    },
+    {
+      type: "Value-Chain",
+      slug: "ai-foundation-models",
+      pagePath: "/ai-foundation-models",
+      title: "AI Foundation Models",
+      summary:
+        "Where physics does the pricing. A value-chain view of compute, infrastructure and model economics.",
+      month: "April 2026",
+      pdfUrl:
+        "https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a475dfdf2edbbeda162a23f_2026%2004%20-%20AI%20Foundation%20Models%2C%20where%20physics%20does%20the%20pricing%20(M45%20Fundamental%20Research).pdf",
+    },
+  ];
 
+  var PAPER_REDIRECTS = {
+    "/the-m45-way": "/research-insights?paper=the-m45-way",
+    "/global-luxury": "/research-insights?paper=global-luxury",
+    "/ai-foundation-models": "/research-insights?paper=ai-foundation-models",
+  };
+
+  function pathName() {
+    return location.pathname.replace(/\/$/, "") || "/";
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function textOf(node) {
+    return String((node && node.textContent) || "").replace(/\s+/g, " ").trim();
+  }
+
+  function hrefPath(anchor) {
+    try {
+      return new URL(anchor.getAttribute("href") || "", location.origin).pathname.replace(/\/$/, "") || "/";
+    } catch (error) {
+      return "";
+    }
+  }
+
+  function isMobileWidth() {
+    return window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
+  }
+
+  function injectStyle(id, css) {
+    var style = document.getElementById(id);
+    if (!style) {
+      style = document.createElement("style");
+      style.id = id;
+      document.head.appendChild(style);
+    }
+    if (style.textContent !== css) style.textContent = css;
+  }
+
+  function docBySlug(slug) {
+    return (
+      RESEARCH_DOCS.filter(function (doc) {
+        return doc.slug === slug;
+      })[0] || RESEARCH_DOCS[0]
+    );
+  }
+
+  function paperShareUrl(doc) {
+    return PRODUCTION_ORIGIN + doc.pagePath;
+  }
+
+  function isResearchContext() {
+    if (pathName() === "/research-insights") return true;
+    if (new URLSearchParams(location.search).get("pageId") === RESEARCH_PAGE_ID) return true;
+    return !!document.querySelector(
+      ".ri-page,.ri-main,.ri-feature,.ri-grid,.research-main-native,.research-feature-native,.research-grid-native"
+    );
+  }
+
+  function maybeRedirectPaperPages() {
+    var redirect = PAPER_REDIRECTS[pathName()];
+    if (!redirect) return;
+    if (/m45capital\.design\.webflow\.com$/i.test(location.hostname)) return;
+    location.replace(redirect);
+  }
+
+  function researchStyles() {
+    injectStyle(
+      "m45-research-canonical-20260707-style",
+      [
+        "body.m45-research-canonical .research-feature-native,body.m45-research-canonical .ri-feature{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr)!important;align-items:stretch!important;border:1px solid #dedede!important;background:#f4f7f9!important}",
+        "body.m45-research-canonical .research-feature-art,body.m45-research-canonical .ri-feature-art{display:flex!important;min-height:300px!important;padding:44px!important;flex-direction:column!important;justify-content:flex-start!important;align-items:flex-start!important;background:#f4f7f9!important;overflow:visible!important}",
+        "body.m45-research-canonical .research-feature-art:before,body.m45-research-canonical .ri-feature-art:before{display:none!important}",
+        "body.m45-research-canonical .research-feature-copy,body.m45-research-canonical .ri-feature-copy{display:flex!important;min-height:300px!important;padding:44px!important;flex-direction:column!important;justify-content:flex-start!important;background:#292f40!important;color:#f4f7f9!important}",
+        "body.m45-research-canonical .m45-featured-teaser-label{margin:0 0 24px!important;font-family:'Zen Kaku Gothic Antique',sans-serif!important;color:#292f40!important;font-size:12px!important;line-height:1.7!important;font-weight:500!important;letter-spacing:.32em!important;text-transform:uppercase!important}",
+        "body.m45-research-canonical .m45-featured-teaser-body{max-width:720px!important;margin:0!important;color:#4d5360!important;font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-size:14.5px!important;line-height:22px!important;font-weight:400!important}",
+        "body.m45-research-canonical .m45-research-label,body.m45-research-canonical .research-label{margin:0 0 24px!important;font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-size:12px!important;line-height:1.7!important;font-weight:500!important;letter-spacing:.32em!important;text-transform:uppercase!important;color:#f4f7f9!important}",
+        "body.m45-research-canonical .m45-research-feature-title,body.m45-research-canonical .research-feature-title{margin:0 0 22px!important;font-family:Ovo,serif!important;font-size:36px!important;line-height:42px!important;font-weight:400!important;color:#f4f7f9!important}",
+        "body.m45-research-canonical .m45-research-feature-body,body.m45-research-canonical .research-feature-body{max-width:720px!important;margin:0 0 54px!important;font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-size:17.5px!important;line-height:25.375px!important;font-weight:400!important;color:#f4f7f9!important}",
+        "body.m45-research-canonical .m45-research-meta,body.m45-research-canonical .ri-meta,body.m45-research-canonical .research-meta{font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-size:12px!important;line-height:18px!important;font-weight:500!important;letter-spacing:.32em!important;text-transform:uppercase!important;color:rgba(244,247,249,.9)!important}",
+        "body.m45-research-canonical .m45-feature-actions,body.m45-research-canonical .ri-feature-actions{display:flex!important;align-items:center!important;gap:28px!important;flex-wrap:wrap!important;margin-top:36px!important}",
+        "body.m45-research-canonical .m45-research-link,body.m45-research-canonical .ri-card a,body.m45-research-canonical .research-card-native a,body.m45-research-canonical .m45-share-btn{appearance:none!important;background:transparent!important;border:0!important;border-bottom:1px solid currentColor!important;border-radius:0!important;padding:0 0 6px!important;margin:0!important;font-family:Ovo,serif!important;font-size:17.5px!important;line-height:20px!important;font-weight:400!important;text-decoration:none!important;color:#292f40!important;cursor:pointer!important}",
+        "body.m45-research-canonical .m45-feature-actions .m45-research-link,body.m45-research-canonical .m45-feature-actions .m45-share-btn{color:#f4f7f9!important}",
+        "body.m45-research-canonical .research-controls-native,body.m45-research-canonical .ri-controls{display:flex!important;align-items:stretch!important;flex-wrap:wrap!important;border-top:1px solid #dedede!important;border-bottom:1px solid #dedede!important;background:#fff!important}",
+        "body.m45-research-canonical .research-controls-native .ri-filter,body.m45-research-canonical .ri-controls .ri-filter{min-height:58px!important;padding:0 32px!important;border:0!important;border-right:1px solid #dedede!important;background:#fff!important;color:#292f40!important;font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-size:12px!important;line-height:18px!important;letter-spacing:.32em!important;text-transform:uppercase!important;cursor:pointer!important}",
+        "body.m45-research-canonical .research-controls-native .ri-filter.active,body.m45-research-canonical .ri-controls .ri-filter.active{background:#111219!important;color:#f4f7f9!important}",
+        "body.m45-research-canonical .research-grid-native,body.m45-research-canonical .ri-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;border-top:1px solid #dedede!important;border-left:1px solid #dedede!important}",
+        "body.m45-research-canonical .research-card-native,body.m45-research-canonical .ri-card{display:flex!important;min-height:280px!important;padding:44px 36px 34px!important;flex-direction:column!important;justify-content:space-between!important;border-right:1px solid #dedede!important;border-bottom:1px solid #dedede!important;background:#fff!important;color:#292f40!important}",
+        "body.m45-research-canonical .research-card-native.hide,body.m45-research-canonical .ri-card.hide{display:none!important}",
+        "body.m45-research-canonical .research-card-native h3,body.m45-research-canonical .ri-card h3{margin:0 0 24px!important;font-family:Ovo,serif!important;font-size:30px!important;line-height:38px!important;font-weight:400!important;color:#292f40!important}",
+        "body.m45-research-canonical .research-card-native p,body.m45-research-canonical .ri-card p{max-width:420px!important;margin:0!important;font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-size:17.5px!important;line-height:25.375px!important;color:#80848d!important}",
+        "body.m45-research-canonical .ri-card-foot{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:24px!important;margin-top:54px!important}",
+        "body.m45-research-canonical .ri-card-foot .ri-meta{max-width:220px!important;color:#a1a6b0!important}",
+        "body.m45-research-canonical .ri-card-actions{display:flex!important;align-items:flex-end!important;justify-content:flex-end!important;gap:20px!important;white-space:nowrap!important}",
+        ".m45-share-popover{position:fixed!important;z-index:999999!important;width:min(360px,calc(100vw - 40px))!important;background:#f7f7f5!important;border:1px solid rgba(41,47,64,.22)!important;box-shadow:0 24px 70px rgba(17,18,25,.22)!important;padding:24px!important;color:#292f40!important}",
+        ".m45-share-popover[hidden]{display:none!important}",
+        ".m45-share-popover-title{font-family:Ovo,serif!important;font-size:24px!important;line-height:30px!important;margin:0 0 8px!important;color:#292f40!important}",
+        ".m45-share-popover-text{font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-size:14.5px!important;line-height:21px!important;color:#6b6f78!important;margin:0 0 22px!important}",
+        ".m45-share-popover-actions{display:grid!important;grid-template-columns:minmax(0,1fr) 54px 54px!important;gap:12px!important}",
+        ".m45-share-popover button,.m45-share-popover a{font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-size:12px!important;letter-spacing:.26em!important;text-transform:uppercase!important;color:#292f40!important;text-decoration:none!important;background:#fff!important;border:1px solid #dedede!important;padding:14px 16px!important;text-align:left!important;cursor:pointer!important}",
+        ".m45-share-popover .m45-share-icon{width:54px!important;height:54px!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:center!important;letter-spacing:0!important;font-family:Arial,sans-serif!important;font-weight:700!important;text-transform:none!important}",
+        ".m45-share-popover .m45-share-close{position:absolute!important;right:12px!important;top:10px!important;border:0!important;background:transparent!important;padding:8px!important;font-size:18px!important;line-height:18px!important;letter-spacing:0!important;text-transform:none!important}",
+        ".ri-pdf-reader{position:fixed!important;inset:0!important;z-index:999998!important;display:none!important;align-items:center!important;justify-content:center!important;padding:clamp(18px,4vw,48px)!important;background:rgba(17,18,25,.82)!important;backdrop-filter:blur(8px)!important}",
+        ".ri-pdf-reader.is-open{display:flex!important}",
+        ".ri-pdf-panel{width:min(1180px,96vw)!important;height:min(88vh,980px)!important;border:1px solid rgba(244,247,249,.72)!important;background:#2b3144!important;box-shadow:0 28px 90px rgba(0,0,0,.35)!important;display:flex!important;flex-direction:column!important}",
+        ".ri-pdf-top{min-height:64px!important;padding:0 26px!important;display:flex!important;align-items:center!important;gap:22px!important;color:#f4f7f9!important;background:#2b3144!important}",
+        ".ri-pdf-title{margin:0!important;font-family:Ovo,serif!important;font-size:24px!important;line-height:30px!important;color:#f4f7f9!important}",
+        ".ri-pdf-open-link{margin-left:auto!important;font-family:Ovo,serif!important;font-size:17.5px!important;color:#f4f7f9!important;text-decoration:none!important;border-bottom:1px solid currentColor!important;padding-bottom:6px!important}",
+        ".ri-pdf-close{width:28px!important;height:28px!important;border:0!important;background:transparent!important;position:relative!important;cursor:pointer!important}",
+        ".ri-pdf-close:before,.ri-pdf-close:after{content:''!important;position:absolute!important;left:13px!important;top:4px!important;width:1px!important;height:20px!important;background:#f4f7f9!important}",
+        ".ri-pdf-close:before{transform:rotate(45deg)!important}.ri-pdf-close:after{transform:rotate(-45deg)!important}",
+        ".ri-pdf-frame{width:100%!important;flex:1 1 auto!important;border:0!important;background:#2a2a2a!important}",
+        "body.ri-pdf-open{overflow:hidden!important}",
+        "@media(max-width:767px){body.m45-research-canonical .research-feature-native,body.m45-research-canonical .ri-feature{display:block!important}body.m45-research-canonical .research-feature-art,body.m45-research-canonical .ri-feature-art{min-height:0!important;padding:30px 25px!important}body.m45-research-canonical .research-feature-copy,body.m45-research-canonical .ri-feature-copy{min-height:0!important;padding:30px 25px!important}body.m45-research-canonical .m45-featured-teaser-body{font-size:14px!important;line-height:21px!important}body.m45-research-canonical .m45-research-feature-title,body.m45-research-canonical .research-feature-title{font-size:42px!important;line-height:50px!important}body.m45-research-canonical .m45-research-feature-body,body.m45-research-canonical .research-feature-body{font-size:18px!important;line-height:27px!important;margin-bottom:44px!important}body.m45-research-canonical .research-controls-native,body.m45-research-canonical .ri-controls{display:block!important}body.m45-research-canonical .research-controls-native .ri-filter,body.m45-research-canonical .ri-controls .ri-filter{display:block!important;width:100%!important;text-align:left!important;border-right:0!important;border-bottom:1px solid #dedede!important;padding:0 36px!important}body.m45-research-canonical .research-grid-native,body.m45-research-canonical .ri-grid{grid-template-columns:1fr!important}body.m45-research-canonical .research-card-native,body.m45-research-canonical .ri-card{min-height:280px!important;padding:36px 30px 30px!important}.m45-share-popover{left:18px!important;right:18px!important;bottom:18px!important;top:auto!important;width:auto!important}.m45-share-popover-actions{grid-template-columns:minmax(0,1fr) 52px 52px!important}.m45-share-popover .m45-share-icon{width:52px!important;height:52px!important}.ri-pdf-reader{display:none!important}}",
+      ].join("")
+    );
+  }
+
+  function featureHtml(doc) {
+    return [
+      '<div class="m45-research-label research-label">Featured</div>',
+      '<h2 class="m45-research-feature-title research-feature-title">' + escapeHtml(doc.title) + "</h2>",
+      '<p class="m45-research-feature-body research-feature-body">' + escapeHtml(doc.summary) + "</p>",
+      '<div class="m45-research-meta ri-meta research-meta">' + escapeHtml(doc.type + " - " + doc.month) + "</div>",
+      '<div class="m45-feature-actions ri-feature-actions">',
+      '<a class="m45-research-link research-link-white" data-m45-pdf data-m45-doc="' +
+        escapeHtml(doc.slug) +
+        '" href="' +
+        escapeHtml(doc.pdfUrl) +
+        '">View PDF <span>-></span></a>',
+      '<button class="m45-share-btn m45-feature-share" type="button" data-m45-share="' +
+        escapeHtml(doc.slug) +
+        '">Share</button>',
+      "</div>",
+    ].join("");
+  }
+
+  function cardHtml(doc) {
+    return [
+      '<article class="ri-card research-card-native" data-type="' + escapeHtml(doc.type) + '">',
+      "<div>",
+      "<h3>" + escapeHtml(doc.title) + "</h3>",
+      "<p>" + escapeHtml(doc.summary) + "</p>",
+      "</div>",
+      '<div class="ri-card-foot">',
+      '<span class="ri-meta research-meta">' + escapeHtml(doc.type + " - " + doc.month) + "</span>",
+      '<span class="ri-card-actions">',
+      '<a data-m45-pdf data-m45-doc="' + escapeHtml(doc.slug) + '" href="' + escapeHtml(doc.pdfUrl) + '">View PDF</a>',
+      '<button class="m45-share-btn" type="button" data-m45-share="' + escapeHtml(doc.slug) + '">Share</button>',
+      "</span>",
+      "</div>",
+      "</article>",
+    ].join("");
+  }
+
+  function controlHtml() {
+    return ["All", "Whitepapers", "Value-Chain", "Company", "Others"]
+      .map(function (name, index) {
+        return (
+          '<button class="ri-filter' +
+          (index === 0 ? " active" : "") +
+          '" type="button" data-filter="' +
+          escapeHtml(name) +
+          '">' +
+          escapeHtml(name) +
+          "</button>"
+        );
+      })
+      .join("");
+  }
+
+  function renderResearchPage() {
+    if (!isResearchContext()) return false;
+
+    var feature = document.querySelector(".research-feature-native,.ri-feature");
+    var art = document.querySelector(".research-feature-art,.ri-feature-art");
+    var copy = document.querySelector(".research-feature-copy,.ri-feature-copy");
+    var controls = document.querySelector(".research-controls-native,.ri-controls");
+    var grid = document.querySelector(".research-grid-native,.ri-grid");
+
+    if (!feature && !art && !copy && !controls && !grid) return false;
+
+    document.body.classList.add("ri-page", "m45-research-canonical");
+    researchStyles();
+
+    if (feature) feature.classList.add("ri-feature");
+    if (art) {
+      art.classList.add("ri-feature-art");
+      if (art.dataset.m45ResearchCanonical !== "20260707" || art.textContent.indexOf("A short note on how we think") < 0) {
+        art.dataset.m45ResearchCanonical = "20260707";
+        art.innerHTML =
+          '<div class="m45-featured-teaser-label">The M45 Way</div><p class="m45-featured-teaser-body">' +
+          escapeHtml(FEATURE_TEASER) +
+          "</p>";
+      }
+    }
+
+    if (copy) {
+      copy.classList.add("ri-feature-copy");
+      if (
+        copy.dataset.m45ResearchCanonical !== "20260707" ||
+        copy.textContent.indexOf("Share") < 0 ||
+        copy.textContent.indexOf("Fundamental Research") >= 0
+      ) {
+        copy.dataset.m45ResearchCanonical = "20260707";
+        copy.innerHTML = featureHtml(RESEARCH_DOCS[0]);
+      }
+    }
+
+    if (controls) {
+      controls.classList.add("ri-controls");
+      if (controls.dataset.m45ResearchCanonical !== "20260707") {
+        controls.dataset.m45ResearchCanonical = "20260707";
+        controls.innerHTML = controlHtml();
+      }
+    }
+
+    if (grid) {
+      grid.classList.add("ri-grid");
+      if (grid.dataset.m45ResearchCanonical !== "20260707") {
+        grid.dataset.m45ResearchCanonical = "20260707";
+        grid.innerHTML = RESEARCH_DOCS.map(cardHtml).join("");
+      }
+    }
+
+    bindResearchFilters();
+    syncResearchShareLinks();
+    openSharedPaperIfRequested();
+    return true;
+  }
+
+  function bindResearchFilters() {
+    Array.prototype.forEach.call(document.querySelectorAll(".ri-filter"), function (button) {
+      if (button.dataset.m45FilterBound === "1") return;
+      button.dataset.m45FilterBound = "1";
+      button.addEventListener("click", function () {
+        var filter = button.getAttribute("data-filter") || "All";
+        var grid = document.querySelector(".ri-grid,.research-grid-native");
+        Array.prototype.forEach.call(document.querySelectorAll(".ri-filter"), function (other) {
+          other.classList.toggle("active", other === button);
+        });
+        if (grid) {
+          grid.classList.add("ri-filtering");
+          setTimeout(function () {
+            grid.classList.remove("ri-filtering");
+          }, 180);
+        }
+        Array.prototype.forEach.call(document.querySelectorAll(".ri-card,.research-card-native"), function (card) {
+          card.classList.toggle("hide", filter !== "All" && card.getAttribute("data-type") !== filter);
+        });
+      });
+    });
+  }
+
+  function ensureSharePopover() {
+    var popover = document.getElementById("m45-share-popover");
+    if (popover) return popover;
+
+    popover = document.createElement("div");
+    popover.id = "m45-share-popover";
+    popover.className = "m45-share-popover";
+    popover.hidden = true;
+    popover.innerHTML = [
+      '<button class="m45-share-close" type="button" aria-label="Close share menu">x</button>',
+      '<p class="m45-share-popover-title"></p>',
+      '<p class="m45-share-popover-text"></p>',
+      '<div class="m45-share-popover-actions">',
+      '<button type="button" data-m45-share-copy>Copy link</button>',
+      '<a class="m45-share-icon" data-m45-share-linkedin target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn">in</a>',
+      '<a class="m45-share-icon" data-m45-share-whatsapp target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp">wa</a>',
+      "</div>",
+    ].join("");
+    document.body.appendChild(popover);
+
+    popover.querySelector(".m45-share-close").addEventListener("click", function () {
+      popover.hidden = true;
+    });
+
+    popover.querySelector("[data-m45-share-copy]").addEventListener("click", function () {
+      var button = this;
+      if (navigator.clipboard) navigator.clipboard.writeText(popover.dataset.url || PRODUCTION_ORIGIN + "/research-insights");
+      button.textContent = "Copied";
+      setTimeout(function () {
+        button.textContent = "Copy link";
+      }, 1200);
+    });
+
+    document.addEventListener(
+      "click",
+      function (event) {
+        if (
+          !popover.hidden &&
+          !popover.contains(event.target) &&
+          !(event.target.closest && event.target.closest("[data-m45-share]"))
+        ) {
+          popover.hidden = true;
+        }
+      },
+      true
+    );
+
+    return popover;
+  }
+
+  function openShare(doc, button) {
+    var shareUrl = paperShareUrl(doc);
+    var shareText = doc.title + " - " + doc.summary;
+    var nativePayload = {
+      title: doc.title + " | M45 Capital Partners",
+      text: doc.summary,
+      url: shareUrl,
+    };
+
+    if (navigator.share && isMobileWidth()) {
+      navigator.share(nativePayload).catch(function () {
+        openSharePopover(doc, button, shareUrl, shareText);
+      });
+      return;
+    }
+
+    openSharePopover(doc, button, shareUrl, shareText);
+  }
+
+  function openSharePopover(doc, button, shareUrl, shareText) {
+    var popover = ensureSharePopover();
+    popover.dataset.url = shareUrl;
+    popover.querySelector(".m45-share-popover-title").textContent = doc.title;
+    popover.querySelector(".m45-share-popover-text").textContent = doc.summary;
+    popover.querySelector("[data-m45-share-linkedin]").href =
+      "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl);
+    popover.querySelector("[data-m45-share-whatsapp]").href =
+      "https://wa.me/?text=" + encodeURIComponent(shareText + " " + shareUrl);
+    popover.hidden = false;
+
+    if (isMobileWidth()) return;
+
+    var rect = button.getBoundingClientRect();
+    var width = popover.offsetWidth;
+    var height = popover.offsetHeight;
+    popover.style.left = Math.max(18, Math.min(innerWidth - width - 18, rect.left - width + button.offsetWidth)) + "px";
+    popover.style.top = Math.max(18, Math.min(innerHeight - height - 18, rect.bottom + 14)) + "px";
+  }
+
+  function syncResearchShareLinks() {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-m45-share]"), function (button) {
+      if (button.dataset.m45ShareBound === "1") return;
+      button.dataset.m45ShareBound = "1";
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        openShare(docBySlug(button.getAttribute("data-m45-share")), button);
+      });
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll("[data-m45-pdf]"), function (link) {
+      var doc = docBySlug(link.getAttribute("data-m45-doc"));
+      link.dataset.riShareSlug = doc.slug;
+      link.setAttribute("aria-label", "View " + doc.title + " PDF");
+    });
+  }
+
+  function ensurePdfReader() {
+    var reader = document.getElementById("ri-pdf-reader");
+    if (reader) return reader;
+
+    reader = document.createElement("div");
+    reader.id = "ri-pdf-reader";
+    reader.className = "ri-pdf-reader";
+    reader.setAttribute("role", "dialog");
+    reader.setAttribute("aria-modal", "true");
+    reader.setAttribute("aria-label", "PDF reader");
+    reader.innerHTML = [
+      '<div class="ri-pdf-panel" role="document">',
+      '<div class="ri-pdf-top">',
+      '<p class="ri-pdf-title">M45 Research</p>',
+      '<a class="ri-pdf-open-link" href="#" target="_blank" rel="noopener">Open PDF</a>',
+      '<button class="ri-pdf-close" type="button" aria-label="Close PDF reader"></button>',
+      "</div>",
+      '<iframe class="ri-pdf-frame" title="M45 Research PDF" loading="lazy"></iframe>',
+      "</div>",
+    ].join("");
+    document.body.appendChild(reader);
+
+    reader.addEventListener("click", function (event) {
+      if (event.target === reader || event.target.closest(".ri-pdf-close")) closePdfReader();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closePdfReader();
+    });
+
+    return reader;
+  }
+
+  function closePdfReader() {
+    var reader = document.getElementById("ri-pdf-reader");
+    if (!reader) return;
+    reader.classList.remove("is-open");
+    document.body.classList.remove("ri-pdf-open");
+  }
+
+  function openPdfReader(link, event) {
+    if (!link || !/\.pdf(?:$|[?#])/i.test(link.href)) return;
+    if (!isResearchContext()) return;
+    if (isMobileWidth()) {
+      link.target = "_self";
+      return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+    if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+
+    var doc = docBySlug(link.getAttribute("data-m45-doc") || link.dataset.riShareSlug);
+    var reader = ensurePdfReader();
+    var frame = reader.querySelector(".ri-pdf-frame");
+    reader.querySelector(".ri-pdf-title").textContent = doc.title;
+    reader.querySelector(".ri-pdf-open-link").href = link.href;
+    frame.title = doc.title + " PDF";
+    frame.src = link.href + "#toolbar=1&navpanes=0&view=FitH";
+    reader.classList.add("is-open");
+    document.body.classList.add("ri-pdf-open");
+    var close = reader.querySelector(".ri-pdf-close");
+    if (close) close.focus();
+  }
+
+  function bindPdfLinks() {
+    document.addEventListener(
+      "click",
+      function (event) {
+        var link = event.target.closest && event.target.closest('a[href*=".pdf"]');
+        if (link) openPdfReader(link, event);
+      },
+      true
+    );
+  }
+
+  function openSharedPaperIfRequested() {
+    var paper = new URLSearchParams(location.search).get("paper");
+    if (!paper || document.documentElement.dataset.m45OpenedSharedPaper === paper) return;
+    document.documentElement.dataset.m45OpenedSharedPaper = paper;
+    setTimeout(function () {
+      var link = document.querySelector('[data-m45-doc="' + paper.replace(/"/g, '\\"') + '"]');
+      if (!link) return;
+      var block = link.closest(".ri-card,.research-card-native,.ri-feature,.research-feature-native") || link;
+      block.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (isMobileWidth()) {
+        setTimeout(function () {
+          location.assign(link.href);
+        }, 250);
+      } else {
+        setTimeout(function () {
+          link.click();
+        }, 500);
+      }
+    }, 550);
+  }
+
+  function normalizeNav() {
+    injectStyle(
+      "m45-nav-canonical-20260707-style",
+      [
+        "@media(min-width:992px){.navbar-linkcontainer.w-nav-menu{display:flex!important;align-items:flex-start!important;gap:45px!important;white-space:nowrap!important}.navbar-linkcontainer.w-nav-menu .navbar-linkwrapper{display:inline-flex!important;white-space:nowrap!important;margin-right:0!important}.navbar-linkcontainer.w-nav-menu .navlink,.navbar-linkcontainer.w-nav-menu .m45-research-navlink,.navbar-contactus-container .contactus-btn,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email),.ri-nav .ri-wd-contact.linebtn.arrowleftbtn{font-family:Ovo,serif!important;font-size:18.375px!important;line-height:25.375px!important;font-weight:400!important;letter-spacing:0!important;text-decoration:none!important}.navbar-linkcontainer.w-nav-menu .navlink,.navbar-linkcontainer.w-nav-menu .m45-research-navlink,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email){padding:8px 0!important;border-bottom:1px solid transparent!important}.navbar-linkcontainer.w-nav-menu .navlink:hover,.navbar-linkcontainer.w-nav-menu .navlink.w--current,.navbar-linkcontainer.w-nav-menu .m45-research-navlink:hover,.navbar-linkcontainer.w-nav-menu .m45-research-navlink.w--current,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email):hover,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email).active,.ri-nav .ri-links a:not(.ri-mobile-close):not(.ri-mobile-email).w--current{border-bottom-color:currentColor!important}body.ri-page .ri-nav{padding-left:70px!important;padding-right:70px!important;gap:65px!important}body.ri-page .ri-links{display:flex!important;flex-wrap:nowrap!important;gap:45px!important;align-items:flex-start!important;padding-top:8px!important;white-space:nowrap!important}body.ri-page .ri-contact-wrap{padding-top:8px!important;margin-left:auto!important}}",
+      ].join("")
+    );
+
+    Array.prototype.forEach.call(document.querySelectorAll(".navbar-linkcontainer.w-nav-menu"), normalizeWebflowMenu);
+    var researchLinks = document.querySelector(".ri-nav .ri-links");
+    if (researchLinks) normalizeResearchMenu(researchLinks);
+  }
+
+  function normalizeWebflowMenu(menu) {
+    if (menu.dataset.m45NavCanonical === "20260707" && menu.querySelectorAll(".m45-research-navlink").length === 1) {
+      return;
+    }
+
+    var anchors = Array.prototype.slice.call(menu.querySelectorAll("a"));
+    anchors.forEach(function (anchor) {
+      var labelByPath = {
+        "/our-investment-philosophy": "Our Investment Philosophy",
+        "/what-we-do": "What We Do",
+        "/our-leadership": "Our Leadership",
+        "/newsroom": "Newsroom",
+      }[hrefPath(anchor)];
+      if (labelByPath) anchor.textContent = labelByPath;
+    });
+
+    anchors.forEach(function (anchor) {
+      if (textOf(anchor).toLowerCase() !== "research & insights" && hrefPath(anchor) !== "/research-insights") return;
+      var wrapper = anchor.closest(".navbar-linkwrapper");
+      if (wrapper && wrapper.parentNode === menu) wrapper.remove();
+      else anchor.remove();
+    });
+
+    var news = Array.prototype.slice.call(menu.querySelectorAll("a")).filter(function (anchor) {
+      return hrefPath(anchor) === "/newsroom" || textOf(anchor).toLowerCase() === "newsroom";
+    })[0];
+    var wrapper = document.createElement("div");
+    wrapper.className = "navbar-linkwrapper";
+    var link = document.createElement("a");
+    link.className = "navlink w-nav-link m45-research-navlink";
+    link.href = "/research-insights";
+    link.textContent = "Research & Insights";
+    if (pathName() === "/research-insights") {
+      link.classList.add("w--current");
+      link.setAttribute("aria-current", "page");
+    }
+    wrapper.appendChild(link);
+
+    if (news && news.closest(".navbar-linkwrapper")) news.closest(".navbar-linkwrapper").insertAdjacentElement("afterend", wrapper);
+    else menu.appendChild(wrapper);
+
+    menu.dataset.m45NavCanonical = "20260707";
+  }
+
+  function normalizeResearchMenu(menu) {
+    if (menu.dataset.m45NavCanonical === "20260707" && menu.querySelectorAll(".m45-research-navlink").length === 1) {
+      return;
+    }
+
+    Array.prototype.slice.call(menu.querySelectorAll("a")).forEach(function (anchor) {
+      if (textOf(anchor).toLowerCase() === "research & insights" || hrefPath(anchor) === "/research-insights") anchor.remove();
+    });
+    var link = document.createElement("a");
+    link.className = "m45-research-navlink";
+    link.href = "/research-insights";
+    link.textContent = "Research & Insights";
+    if (pathName() === "/research-insights") {
+      link.classList.add("w--current", "active");
+      link.setAttribute("aria-current", "page");
+    }
+    var news = Array.prototype.slice.call(menu.querySelectorAll("a")).filter(function (anchor) {
+      return textOf(anchor).toLowerCase() === "newsroom" || hrefPath(anchor) === "/newsroom";
+    })[0];
+    if (news) news.insertAdjacentElement("afterend", link);
+    else menu.appendChild(link);
+
+    menu.dataset.m45NavCanonical = "20260707";
+  }
+
+  function patchMapLinks() {
+    Array.prototype.forEach.call(document.querySelectorAll("a"), function (link) {
+      var label = textOf(link).toLowerCase();
+      var href = link.getAttribute("href") || "";
+      if (label !== "locate us" && !link.classList.contains("landing-contact-btn") && href.indexOf("maps.app.goo.gl") < 0) return;
+      link.href = MAP_URL;
+      link.target = "_blank";
+      link.rel = "noopener";
+    });
+  }
+
+  function fixMobileMenuArrows() {
+    if (window.matchMedia && !window.matchMedia("(max-width: 991px)").matches) return;
+    Array.prototype.forEach.call(document.querySelectorAll(".navbar-linkwrapper"), function (wrapper) {
+      var arrow = wrapper.querySelector(".mobilemenu-arrowdiv");
+      if (arrow && wrapper.firstElementChild !== arrow) wrapper.insertBefore(arrow, wrapper.firstElementChild);
+    });
+  }
+
+  function run() {
+    normalizeNav();
+    patchMapLinks();
+    fixMobileMenuArrows();
+    renderResearchPage();
+  }
+
+  maybeRedirectPaperPages();
+  bindPdfLinks();
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
+  else run();
+
+  [50, 150, 300, 700, 1200, 2200, 4200, 7000].forEach(function (delay) {
+    setTimeout(run, delay);
+  });
+
+  window.addEventListener("resize", function () {
+    normalizeNav();
+    fixMobileMenuArrows();
+  });
+
+  new MutationObserver(function () {
+    requestAnimationFrame(run);
+  }).observe(document.documentElement, { childList: true, subtree: true });
+})();
 </script>
