@@ -20,6 +20,8 @@ C:\Users\gordo\Documents\Codex\2026-07-01\are\work\m45-webflow-custom-code\webfl
 
 Webflow Head Code should be empty. Webflow Footer Code should contain the full contents of `webflow-footer-inline-full.html`.
 
+The Webflow project setting `Run custom code in Preview` should remain on. Otherwise, Webflow's own site preview can look different from production and may show stale native fallback content instead of the canonical custom-code-rendered Research & Insights page.
+
 ## Module Map
 
 `m45-site.js` is organized as a sequence of immediately invoked function expressions. Each block is self-contained and guarded to avoid running on unrelated pages where possible.
@@ -28,7 +30,7 @@ Webflow Head Code should be empty. Webflow Footer Code should contain the full c
 
 1. The full `m45-site.js` payload.
 
-The final Research & Insights featured-card recovery is embedded at the end of `m45-site.js` and guarded by `__m45WebflowFeaturedResearchPatch20260707`. This avoids Webflow partial-save issues where a second script tag can be missed.
+The Research & Insights renderer and all global nav normalization live inside this single script. Avoid adding a second recovery script in Webflow; regenerate and paste the full footer payload instead.
 
 ### Research document taxonomy and featured document
 
@@ -162,6 +164,12 @@ Responsibilities:
 - Normalizes desktop nav typography and spacing.
 - Applies active/current state to `Research & Insights`.
 - Aligns Research & Insights nav with Webflow's standard page nav.
+
+Implementation note:
+
+- On standard Webflow pages, the native nav often keeps the page labels inside a single `.navbar-linkwrapper`. Insert `Research & Insights` directly after the `Newsroom` anchor inside that wrapper when present. Adding a separate wrapper after the native wrapper creates a doubled final gap.
+- On dark hero pages, copy the neighbouring native link class list so the item keeps `navlink-solstice` and inherits the correct white text treatment.
+- On Research & Insights, the custom `.ri-nav .ri-links` header owns its own page-label structure.
 
 Expected desktop nav order:
 

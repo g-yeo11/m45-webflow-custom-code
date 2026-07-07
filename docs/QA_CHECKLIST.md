@@ -18,6 +18,8 @@ For each page:
 - Header logo appears correctly.
 - Desktop nav order is correct.
 - `Research & Insights` appears exactly once.
+- Desktop nav gaps between adjacent page labels are consistent; the final `Newsroom` to `Research & Insights` gap should not be doubled.
+- `Research & Insights` inherits the right header colour: dark on light headers, white on dark hero headers.
 - Current page has an underline.
 - Hovering nav labels shows an underline.
 - Page-load animation feels consistent with `What We Do`.

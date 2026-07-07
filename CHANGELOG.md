@@ -13,6 +13,44 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-07
 
+### Fixed global nav parity and featured teaser contrast
+
+Summary:
+
+- Updated the global nav normalizer so `Research & Insights` is inserted after `Newsroom` inside the native Webflow nav wrapper when that wrapper contains the existing page links.
+- This removes the doubled spacing that occurred when `Research & Insights` was added as a separate wrapper.
+- Copied the native link classes from the neighbouring page link so the item inherits the correct light/dark header treatment.
+- Added a small fade-in for the injected `Research & Insights` item so it does not appear static compared with the native page labels.
+- Added a more specific Research featured-teaser colour rule so the long `The M45 Way` teaser stays readable on the light left panel.
+
+Files changed:
+
+- `m45-site.js`
+- `webflow-footer-inline-full.html`
+- `CHANGELOG.md`
+- `docs/CUSTOM_CODE_REFERENCE.md`
+- `docs/QA_CHECKLIST.md`
+
+Webflow actions:
+
+- Regenerated the inline Footer Code payload for Webflow.
+- Pasted the updated payload into Webflow global Footer Code.
+- Removed the stale GitHub loader from the active published HTML path.
+- Switched Webflow's `Run custom code in Preview` setting on so site preview uses the same custom code behaviour.
+- Published staging and production.
+
+Verification:
+
+- Ran `node --check m45-site.js`.
+- Tested a clean-page simulation with the old custom-code block stripped out and the new script injected.
+- Confirmed Home, Our Investment Philosophy, What We Do, Our Leadership, Newsroom, and Research & Insights each have exactly one `Research & Insights` link.
+- Confirmed desktop nav gaps are consistently 45px between adjacent labels across all six tested pages.
+- Confirmed `Research & Insights` is white on dark hero pages and dark on light hero pages.
+- Confirmed `Research & Insights` uses the same Ovo 18.375px desktop nav typography and hover underline behaviour.
+- Confirmed the production HTML contains `20260707-nav2`, the teaser override, and no GitHub loader.
+- Confirmed Webflow site preview can see the Research teaser inside the preview canvas.
+- Confirmed the Research featured teaser text computes to `rgb(77, 83, 96)` instead of white.
+
 ### Consolidated Research & Insights into one canonical renderer
 
 Summary:
