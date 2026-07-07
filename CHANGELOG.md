@@ -13,6 +13,33 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-07
 
+### Added client portal integration groundwork
+
+Summary:
+
+- Added a planning document for the future M45 client portal.
+- Recommended keeping the public Webflow site as the marketing shell and building the client portal as a separate secure application.
+- Documented the preferred future subdomain pattern, security boundary, Webflow handoff points, roles, app contract, and QA checklist.
+- Added clear guidance not to store private client documents, secrets, client permissions, or sensitive data in Webflow.
+- Added a startup prompt for the separate Codex chat building the portal.
+
+Files changed:
+
+- `README.md`
+- `CHANGELOG.md`
+- `docs/AI_AGENT_HANDOFF.md`
+- `docs/CLIENT_PORTAL_INTEGRATION.md`
+- `docs/QA_CHECKLIST.md`
+- `docs/SITE_ARCHITECTURE.md`
+
+Webflow actions:
+
+- None. Documentation-only change.
+
+Verification:
+
+- Confirmed portal guidance is linked from the README, site architecture, AI handoff notes, and QA checklist.
+
 ### Added Codex Webflow operations documentation
 
 Summary:

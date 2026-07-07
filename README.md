@@ -28,6 +28,7 @@ Canonical source files:
 - [Visual Style & Animation Guide](docs/VISUAL_STYLE_AND_ANIMATIONS.md)
 - [Research & Insights Guide](docs/RESEARCH_INSIGHTS.md)
 - [Whitepaper Sharing Pages Guide](docs/WHITEPAPER_SHARING_PAGES.md)
+- [Client Portal Integration Plan](docs/CLIENT_PORTAL_INTEGRATION.md)
 - [Webflow Editing Runbook](docs/WEBFLOW_EDITING_RUNBOOK.md)
 - [Codex Webflow Operations Guide](docs/CODEX_WEBFLOW_OPERATIONS.md)
 - [QA Checklist](docs/QA_CHECKLIST.md)

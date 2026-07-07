@@ -11,7 +11,8 @@ This file is for future AI agents or developers working on the M45 Webflow site.
 5. `docs/CODEX_WEBFLOW_OPERATIONS.md`
 6. `docs/WEBFLOW_EDITING_RUNBOOK.md`
 7. `docs/VISUAL_STYLE_AND_ANIMATIONS.md`
-8. The current `m45-site.js`
+8. `docs/CLIENT_PORTAL_INTEGRATION.md`
+9. The current `m45-site.js`
 
 ## Recommended Startup Prompt
 
@@ -85,6 +86,18 @@ Best path:
 - Give each page its own title, meta description, and Open Graph image.
 - Share those canonical pages instead of JavaScript redirect routes.
 - Follow `docs/WHITEPAPER_SHARING_PAGES.md`.
+
+### Add or connect a client portal
+
+Use `docs/CLIENT_PORTAL_INTEGRATION.md`.
+
+Important:
+
+- Do not build a sensitive client portal purely in Webflow custom code.
+- Do not rely on Webflow User Accounts.
+- Do not store private client documents, secrets, or client permissions in Webflow.
+- Prefer a separate secure app on a subdomain such as `portal.m45capital.com`.
+- Only add a public `Client Portal` nav link when the secure portal URL and access model are ready.
 
 ## Verification Priorities
 

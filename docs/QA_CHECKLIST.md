@@ -41,6 +41,30 @@ Check at mobile width or on a phone:
 - `Get in Touch` and email/address content appear correctly.
 - Mobile menu open/close animation matches the other pages.
 
+## Future Client Portal Link
+
+Only use this section after a real secure portal URL exists.
+
+Desktop:
+
+- `Client Portal` link appears only where approved.
+- Existing nav spacing and typography remain consistent.
+- `Client Portal` opens the secure portal URL, not a Webflow member page.
+- Existing `Get In Touch` interaction still works.
+
+Mobile:
+
+- `Client Portal` appears in the approved mobile menu position.
+- Mobile menu arrows remain aligned at the top of menu items.
+- Tap target is large enough and does not crowd `Get in Touch`.
+
+Security boundary:
+
+- No private client documents are hosted on Webflow public CDN.
+- No client secrets, API keys, or access tokens appear in Webflow custom code.
+- No client-specific data appears in Webflow CMS or page HTML.
+- Portal authentication and authorization are handled by the portal app.
+
 ## What We Do
 
 Desktop:

@@ -19,6 +19,13 @@ This repository owns:
 - Documentation for future maintenance
 - Change history through Git commits and `CHANGELOG.md`
 
+Future client portal note:
+
+- The client portal should be treated as a separate secure application, not as sensitive functionality embedded in Webflow custom code.
+- The public Webflow site can link to the portal once it is ready.
+- Recommended future URL pattern: `portal.m45capital.com`.
+- See `docs/CLIENT_PORTAL_INTEGRATION.md`.
+
 Production runs the inline payload pasted into the Webflow global Footer Code field:
 
 ```text
@@ -198,3 +205,31 @@ Expected content:
 Expected design:
 
 - Match the footer dimensions, typography, spacing, and colour treatment used on `What We Do`.
+
+## Future Client Portal
+
+The planned client portal should sit outside the public Webflow page structure.
+
+Recommended relationship:
+
+```text
+www.m45capital.com        Public Webflow site
+portal.m45capital.com     Secure client portal app
+```
+
+Webflow should eventually provide only the public entry point:
+
+- Desktop `Client Portal` utility link if approved.
+- Mobile menu `Client Portal` link if approved.
+- Optional footer link.
+
+Sensitive portal responsibilities should live in the app:
+
+- Authentication and MFA
+- Authorization
+- Private documents
+- Client data
+- Audit logs
+- Admin workflows
+
+Do not store private client documents, secrets, or permissions in Webflow.
