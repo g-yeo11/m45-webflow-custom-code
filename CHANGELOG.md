@@ -20,6 +20,7 @@ Summary:
 - Added a defensive Research & Insights recovery patch for the featured whitepaper module.
 - Restores the long `The M45 Way` teaser in the left feature panel when Webflow renders the native feature classes.
 - Restores a featured `Share` action beside `View PDF` with copy, LinkedIn, WhatsApp, and mobile native-share support.
+- Follow-up: added a stronger final pass for Webflow's native `.research-feature-*` module so the teaser and featured share action are restored even if another script rewrites the block after initial load.
 
 Files changed:
 
