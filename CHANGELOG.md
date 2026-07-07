@@ -13,6 +13,31 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-07
 
+### Fixed mobile Research featured teaser overflow
+
+Summary:
+
+- Updated the mobile Research & Insights featured module so the light teaser panel auto-expands for the long `The M45 Way` teaser.
+- Prevented the teaser text from overflowing into the dark featured card below on phone-width screens.
+
+Files changed:
+
+- `m45-site.js`
+- `webflow-footer-inline-full.html`
+- `CHANGELOG.md`
+
+Webflow actions:
+
+- Regenerated the inline Footer Code payload.
+- Pasted the updated payload into Webflow global Footer Code.
+- Saved Webflow custom code.
+- Published staging and production.
+
+Verification:
+
+- Confirmed the live production HTML contains the mobile overflow fix, still contains `20260707-nav2`, and has no GitHub loader.
+- Verified at a 393px mobile viewport that the teaser is fully inside the light panel and the dark featured card starts below it with no overlap.
+
 ### Fixed global nav parity and featured teaser contrast
 
 Summary:
