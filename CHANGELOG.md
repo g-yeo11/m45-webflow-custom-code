@@ -11,6 +11,29 @@ Use reverse chronological order. Each entry should include:
 - Verification performed
 - Follow-ups or risks
 
+## 2026-07-07
+
+### Restored featured whitepaper teaser and share action
+
+Summary:
+
+- Added a defensive Research & Insights recovery patch for the featured whitepaper module.
+- Restores the long `The M45 Way` teaser in the left feature panel when Webflow renders the native feature classes.
+- Restores a featured `Share` action beside `View PDF` with copy, LinkedIn, WhatsApp, and mobile native-share support.
+
+Files changed:
+
+- `m45-site.js`
+- `CHANGELOG.md`
+
+Webflow actions:
+
+- None yet. Publish or cache-bust the Webflow custom-code loader if production does not pick up the GitHub Pages script update quickly.
+
+Verification:
+
+- Ran `node --check m45-site.js`.
+
 ## 2026-07-06
 
 ### Added visual style and animation documentation
