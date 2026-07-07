@@ -125,7 +125,7 @@ https://www.m45capital.com/ai-foundation-models
    - the route map inside the share tools
 5. Run the JavaScript syntax check.
 6. Commit and push.
-7. Update Webflow footer loader `v=`.
+7. Regenerate `webflow-footer-inline-full.html`, paste it into Webflow Footer Code, and publish.
 8. Publish Webflow.
 9. Test desktop and mobile.
 10. Add a changelog entry.

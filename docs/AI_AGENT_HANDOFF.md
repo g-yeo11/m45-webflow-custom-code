@@ -14,14 +14,16 @@ This file is for future AI agents or developers working on the M45 Webflow site.
 ## Current Important Facts
 
 - The site is hosted by Webflow.
-- The custom JavaScript is hosted by GitHub Pages.
-- Webflow global custom code should stay minimal.
-- `m45-site.js` is the active behaviour layer.
-- The production loader should be cache-busted with a `v=` query string after script changes.
+- The live custom JavaScript is pasted directly into Webflow global Footer Code.
+- `m45-site.js` is the main source file, not the exact paste payload.
+- `webflow-footer-inline-full.html` is the exact payload to paste into Webflow Footer Code.
+- Webflow Head Code should be empty.
+- The final Research & Insights featured-card recovery is embedded at the end of `m45-site.js` and guarded by `__m45WebflowFeaturedResearchPatch20260707`.
 
 ## Do Not Do This
 
-- Do not paste the full script into Webflow global custom code unless intentionally abandoning GitHub Pages.
+- Do not add a GitHub Pages loader back into Webflow unless the owner explicitly changes the hosting model again.
+- Do not remove the final Research & Insights featured-card recovery from `m45-site.js`.
 - Do not create duplicate nav links manually in Webflow without checking the custom nav script.
 - Do not remove the mobile direct-PDF behaviour without testing mobile pinch zoom and scroll.
 - Do not assume LinkedIn/WhatsApp previews will use JavaScript-rendered metadata.

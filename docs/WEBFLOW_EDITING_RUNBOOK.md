@@ -10,12 +10,6 @@ GitHub repository:
 https://github.com/g-yeo11/m45-webflow-custom-code
 ```
 
-GitHub Pages script:
-
-```text
-https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js
-```
-
 Production site:
 
 ```text
@@ -56,33 +50,31 @@ git status --short
 Run syntax check:
 
 ```powershell
-$node='C:\Users\gordo\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
-@'
-const fs = require('fs');
-const js = fs.readFileSync('C:/Users/gordo/Documents/Codex/2026-07-01/are/work/m45-webflow-custom-code/m45-site.js', 'utf8');
-new Function(js);
-console.log('ok', js.length);
-'@ | & $node -
+node --check m45-site.js
+```
+
+Regenerate Webflow footer payload:
+
+```powershell
+$repo='C:\Users\gordo\Documents\Codex\2026-07-01\are\work\m45-webflow-custom-code'
+$main=Get-Content -LiteralPath (Join-Path $repo 'm45-site.js') -Raw
+$payload="<!-- M45 Webflow-owned custom behaviour; update this marker when publishing a material custom-code change. Source files are maintained in the local documentation repo. -->`r`n<script>`r`n$main`r`n</script>`r`n"
+Set-Content -LiteralPath (Join-Path $repo 'webflow-footer-inline-full.html') -Value $payload -Encoding UTF8
 ```
 
 Commit and push:
 
 ```powershell
-git add m45-site.js CHANGELOG.md docs README.md
+git add m45-site.js webflow-footer-inline-full.html CHANGELOG.md docs README.md
 git commit -m "Describe change"
 git push
 ```
 
 ## Publishing A Script Change
 
-1. Push the GitHub commit.
-2. Open the Webflow custom-code page.
-3. In the footer code, update the query string:
-
-```html
-<script src="https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js?v=YYYYMMDDHHMM"></script>
-```
-
+1. Open the Webflow custom-code page.
+2. Clear Head Code.
+3. Paste the full contents of `webflow-footer-inline-full.html` into Footer Code.
 4. Save.
 5. Publish to staging and production.
 6. Test with a cache-busting URL:
@@ -103,8 +95,8 @@ https://www.m45capital.com/research-insights?verify=YYYYMMDDHHMM
 
 If a script change is not visible:
 
-- Confirm `m45-site.js` is updated on GitHub Pages.
-- Confirm Webflow footer loader `v=` changed.
+- Confirm Webflow Footer Code contains the current `webflow-footer-inline-full.html`.
+- Confirm Webflow Head Code is empty.
 - Confirm Webflow was published.
 - Test with a query string on the page URL.
 - Hard refresh the browser.
@@ -126,7 +118,7 @@ git revert <commit-sha>
 git push
 ```
 
-3. Bump the Webflow footer loader `v=`.
+3. Paste the previous good `webflow-footer-inline-full.html` into Webflow Footer Code.
 4. Publish Webflow.
 5. Verify production.
 

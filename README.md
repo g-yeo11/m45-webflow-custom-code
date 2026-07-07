@@ -2,7 +2,7 @@
 
 This repository is the source of truth for custom behaviour and technical documentation for the M45 Capital Partners Webflow site.
 
-The production site is still hosted by Webflow. Webflow loads the custom JavaScript from GitHub Pages so that the Webflow custom-code fields stay small, readable, and below Webflow's character limit.
+The production site is hosted and published by Webflow. The live custom behaviour should live directly in Webflow global Footer Code, copied from `webflow-footer-inline-full.html`. This repo remains the version-controlled working copy, documentation home, and changelog.
 
 ## Live Integration
 
@@ -11,17 +11,14 @@ Production site:
 - [m45capital.com](https://www.m45capital.com/)
 - [Research & Insights](https://www.m45capital.com/research-insights)
 
-Hosted script:
+Webflow custom-code page:
 
-- [m45-site.js](https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js)
+- [Custom code settings](https://webflow.com/dashboard/sites/m45capital/custom-code)
 
-Webflow footer loader:
+Canonical source files:
 
-```html
-<script src="https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js?v=YYYYMMDDHHMM"></script>
-```
-
-When `m45-site.js` changes, commit and push to `main`, then update the `v=` query string in Webflow and publish if browsers need to pick up the change immediately.
+- `m45-site.js`: main site behaviour.
+- `webflow-footer-inline-full.html`: the exact one-script payload to paste into Webflow Footer Code.
 
 ## Documentation
 
@@ -37,28 +34,28 @@ When `m45-site.js` changes, commit and push to `main`, then update the `v=` quer
 
 ## Current Webflow Custom Code Contract
 
-The Webflow global custom-code fields should remain minimal:
-
-Head code:
+Head Code:
 
 ```html
-<!-- M45 custom behaviour is loaded from the footer via GitHub Pages: https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js -->
+<!-- empty -->
 ```
 
-Footer code:
+Footer Code:
 
 ```html
-<script src="https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js?v=YYYYMMDDHHMM"></script>
+<!-- paste the full contents of webflow-footer-inline-full.html -->
 ```
 
-Do not paste the full custom script back into Webflow unless GitHub Pages is unavailable and the tradeoff is intentional.
+The footer payload is generated from `m45-site.js` and should contain one `<script>` tag. The final Research & Insights featured-card recovery lives inside `m45-site.js`, so Webflow only has to preserve one inline script.
 
 ## Standard Update Flow
 
 1. Edit `m45-site.js` or the documentation in this repo.
-2. Run a JavaScript syntax check.
-3. Commit and push to `main`.
-4. If `m45-site.js` changed, bump the Webflow loader query string.
-5. Publish Webflow to staging and production.
-6. Run the desktop and mobile QA checklist.
-7. Add a dated entry to [CHANGELOG.md](CHANGELOG.md).
+2. Regenerate `webflow-footer-inline-full.html`.
+3. Run JavaScript syntax checks on `m45-site.js`.
+4. Paste `webflow-footer-inline-full.html` into Webflow global Footer Code.
+5. Clear Webflow Head Code.
+6. Save and publish Webflow to staging and production.
+7. Run the desktop and mobile QA checklist.
+8. Add a dated entry to [CHANGELOG.md](CHANGELOG.md).
+9. Commit and push this repo.

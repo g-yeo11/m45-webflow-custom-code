@@ -13,6 +13,40 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-07
 
+### Moved live custom code back into Webflow Footer Code
+
+Summary:
+
+- Replaced the GitHub Pages loader contract with a Webflow-owned inline footer payload.
+- Added `webflow-footer-inline-full.html` as the exact paste payload for Webflow global Footer Code.
+- Kept `m45-site.js` as the version-controlled main source file.
+- Moved the Research & Insights featured-paper recovery into `m45-site.js` so Webflow only needs to preserve one inline script tag.
+- Removed older duplicate featured-paper recovery blocks from `m45-site.js`.
+- Updated documentation so future edits do not reintroduce the GitHub loader.
+
+Files changed:
+
+- `m45-site.js`
+- `webflow-footer-inline-full.html`
+- `README.md`
+- `CHANGELOG.md`
+- `docs/AI_AGENT_HANDOFF.md`
+- `docs/CUSTOM_CODE_REFERENCE.md`
+- `docs/RESEARCH_INSIGHTS.md`
+- `docs/SITE_ARCHITECTURE.md`
+- `docs/WEBFLOW_EDITING_RUNBOOK.md`
+
+Webflow actions:
+
+- Cleared Head Code.
+- Pasted the one-script `webflow-footer-inline-full.html` payload into Footer Code.
+- Published staging and production.
+
+Verification:
+
+- Ran `node --check m45-site.js`.
+- Confirmed `webflow-footer-inline-full.html` contains one script tag with `__m45WebflowFeaturedResearchPatch20260707`, `m45-feature-share`, and no GitHub loader reference.
+
 ### Restored featured whitepaper teaser and share action
 
 Summary:
@@ -29,7 +63,7 @@ Files changed:
 
 Webflow actions:
 
-- None yet. Publish or cache-bust the Webflow custom-code loader if production does not pick up the GitHub Pages script update quickly.
+- Superseded by the inline footer payload entry above.
 
 Verification:
 

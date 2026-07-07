@@ -1,8 +1,8 @@
 # Custom Code Reference
 
-The active custom script is `m45-site.js`.
+The active custom script source is `m45-site.js`.
 
-It is intentionally loaded externally from GitHub Pages because Webflow's global custom-code fields have a practical character limit and are harder to version-control.
+The live Webflow site should use an inline global Footer Code payload generated into `webflow-footer-inline-full.html`. This keeps the live behaviour inside Webflow while still preserving a version-controlled source of truth in this repo.
 
 ## Script Location
 
@@ -12,21 +12,23 @@ Local file:
 C:\Users\gordo\Documents\Codex\2026-07-01\are\work\m45-webflow-custom-code\m45-site.js
 ```
 
-Hosted file:
+Webflow footer payload:
 
 ```text
-https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js
+C:\Users\gordo\Documents\Codex\2026-07-01\are\work\m45-webflow-custom-code\webflow-footer-inline-full.html
 ```
 
-Production loader:
-
-```html
-<script src="https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js?v=YYYYMMDDHHMM"></script>
-```
+Webflow Head Code should be empty. Webflow Footer Code should contain the full contents of `webflow-footer-inline-full.html`.
 
 ## Module Map
 
 `m45-site.js` is organized as a sequence of immediately invoked function expressions. Each block is self-contained and guarded to avoid running on unrelated pages where possible.
+
+`webflow-footer-inline-full.html` contains one script tag:
+
+1. The full `m45-site.js` payload.
+
+The final Research & Insights featured-card recovery is embedded at the end of `m45-site.js` and guarded by `__m45WebflowFeaturedResearchPatch20260707`. This avoids Webflow partial-save issues where a second script tag can be missed.
 
 ### Research document taxonomy and featured document
 
@@ -182,12 +184,8 @@ Expected desktop nav order:
 Use Node to check the script before publishing:
 
 ```powershell
-$node='C:\Users\gordo\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
-@'
-const fs = require('fs');
-const js = fs.readFileSync('C:/Users/gordo/Documents/Codex/2026-07-01/are/work/m45-webflow-custom-code/m45-site.js', 'utf8');
-new Function(js);
-console.log('ok', js.length);
-'@ | & $node -
+cd C:\Users\gordo\Documents\Codex\2026-07-01\are\work\m45-webflow-custom-code
+node --check m45-site.js
 ```
 
+Also check the single inline script tag in `webflow-footer-inline-full.html` before pasting into Webflow.

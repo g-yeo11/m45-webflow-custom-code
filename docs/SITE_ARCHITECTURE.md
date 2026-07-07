@@ -12,17 +12,20 @@ Webflow owns:
 - Base styles and interactions
 - Static assets uploaded to Webflow's CDN
 
-GitHub Pages owns:
+This repository owns:
 
-- The external JavaScript file `m45-site.js`
+- The JavaScript source file `m45-site.js`
+- The final Webflow footer payload `webflow-footer-inline-full.html`
 - Documentation for future maintenance
 - Change history through Git commits and `CHANGELOG.md`
 
-Production loads the GitHub Pages script from the Webflow footer custom-code field:
+Production runs the inline payload pasted into the Webflow global Footer Code field:
 
-```html
-<script src="https://g-yeo11.github.io/m45-webflow-custom-code/m45-site.js?v=YYYYMMDDHHMM"></script>
+```text
+webflow-footer-inline-full.html
 ```
+
+Webflow global Head Code should remain empty.
 
 ## Main Pages
 
