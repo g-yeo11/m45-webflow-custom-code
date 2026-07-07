@@ -29,6 +29,7 @@ Canonical source files:
 - [Research & Insights Guide](docs/RESEARCH_INSIGHTS.md)
 - [Whitepaper Sharing Pages Guide](docs/WHITEPAPER_SHARING_PAGES.md)
 - [Webflow Editing Runbook](docs/WEBFLOW_EDITING_RUNBOOK.md)
+- [Codex Webflow Operations Guide](docs/CODEX_WEBFLOW_OPERATIONS.md)
 - [QA Checklist](docs/QA_CHECKLIST.md)
 - [AI Agent Handoff Notes](docs/AI_AGENT_HANDOFF.md)
 
@@ -59,3 +60,5 @@ The footer payload is generated from `m45-site.js` and should contain one `<scri
 7. Run the desktop and mobile QA checklist.
 8. Add a dated entry to [CHANGELOG.md](CHANGELOG.md).
 9. Commit and push this repo.
+
+For Codex-assisted edits, read [Codex Webflow Operations Guide](docs/CODEX_WEBFLOW_OPERATIONS.md) before touching Webflow. It documents the Webflow navigation workflow, save/publish sequence, verification checks, and common failure modes learned from prior edits.

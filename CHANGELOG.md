@@ -13,6 +13,38 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-07
 
+### Added Codex Webflow operations documentation
+
+Summary:
+
+- Added a dedicated Codex Webflow operations guide covering how future Codex chats should navigate Webflow, paste and publish custom code, verify production, and recover from common failure modes.
+- Documented key lessons from prior Webflow edits:
+  - Webflow Head Code should stay empty.
+  - Footer Code should contain the inline `webflow-footer-inline-full.html` payload.
+  - Do not reintroduce the old GitHub Pages loader.
+  - Webflow expanded editor `Save & Close`, main `Save`, and production publish are separate steps.
+  - Webflow Design mode can differ from Preview and production when custom code is involved.
+  - Production HTML markers and cache-busting URLs are required verification steps.
+- Cross-linked the new guide from the README, AI handoff notes, editing runbook, custom-code reference, and QA checklist.
+
+Files changed:
+
+- `README.md`
+- `CHANGELOG.md`
+- `docs/AI_AGENT_HANDOFF.md`
+- `docs/CODEX_WEBFLOW_OPERATIONS.md`
+- `docs/CUSTOM_CODE_REFERENCE.md`
+- `docs/QA_CHECKLIST.md`
+- `docs/WEBFLOW_EDITING_RUNBOOK.md`
+
+Webflow actions:
+
+- None. Documentation-only change.
+
+Verification:
+
+- Confirmed repository docs include the Codex/Webflow navigation workflow, save/publish sequence, common issues, and mitigations.
+
 ### Fixed mobile Research featured teaser overflow
 
 Summary:

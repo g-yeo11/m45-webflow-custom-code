@@ -22,6 +22,8 @@ Webflow Head Code should be empty. Webflow Footer Code should contain the full c
 
 The Webflow project setting `Run custom code in Preview` should remain on. Otherwise, Webflow's own site preview can look different from production and may show stale native fallback content instead of the canonical custom-code-rendered Research & Insights page.
 
+For Codex-assisted Webflow navigation, paste verification, save/publish sequencing, and common issue recovery, use `docs/CODEX_WEBFLOW_OPERATIONS.md`.
+
 ## Module Map
 
 `m45-site.js` is organized as a sequence of immediately invoked function expressions. Each block is self-contained and guarded to avoid running on unrelated pages where possible.
@@ -186,6 +188,7 @@ Expected desktop nav order:
 - Add clear comments before complex behaviour.
 - Do not remove Webflow-native classes unless the page has been tested in Designer, staging, and production.
 - Update `CHANGELOG.md` every time behaviour changes.
+- When a change is intended to be live, verify production HTML after publishing. A repo commit alone does not change the Webflow site.
 
 ## Syntax Check
 

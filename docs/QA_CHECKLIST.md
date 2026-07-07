@@ -72,6 +72,7 @@ Desktop:
 - Nav typography matches the rest of the site.
 - Featured document shows `The M45 Way`.
 - Featured teaser appears in the left panel.
+- Featured teaser text is readable on the light left panel.
 - Filters are:
   - `All`
   - `Whitepapers`
@@ -89,10 +90,30 @@ Mobile:
 
 - Research page animation and layout feel consistent with `What We Do`.
 - Featured teaser appears.
+- Featured teaser stays fully inside the light panel and does not overlap the dark featured card below.
 - Filters are usable and do not overflow awkwardly.
 - `View PDF` opens the native PDF directly.
 - Native PDF can be scrolled and pinch-zoomed.
 - Share opens native share sheet where supported.
+
+Designer/Preview:
+
+- Webflow pure Design mode may show fallback content; this is not the final behavioural check.
+- Webflow Preview with `Enable custom code?` on should match production.
+- Production with a cache-busting URL is the final check.
+
+## Custom Code Publish QA
+
+After changing `m45-site.js` and publishing:
+
+- Webflow Head Code is empty.
+- Webflow Footer Code contains the inline `webflow-footer-inline-full.html` payload.
+- Footer Code contains one `<script>` tag.
+- Footer Code does not contain `github` or `g-yeo11`.
+- Main Webflow `Save` was clicked after closing the expanded editor.
+- Staging and production were published.
+- Production HTML contains the expected marker for the change.
+- Production HTML does not contain the old GitHub loader.
 
 ## Automated Nav Check
 

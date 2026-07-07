@@ -27,10 +27,13 @@ https://webflow.com/dashboard/sites/m45capital/custom-code
 1. Check repository status.
 2. Pull latest changes if another person may have edited.
 3. Read the latest entries in `CHANGELOG.md`.
-4. Identify whether the change belongs in:
+4. Read `docs/CODEX_WEBFLOW_OPERATIONS.md` if Codex will navigate Webflow.
+5. Identify whether the change belongs in:
    - Webflow Designer or CMS
    - `m45-site.js`
    - both
+
+If the request is visual, open `What We Do` as the reference page and compare it side by side with the target page.
 
 ## Editing `m45-site.js`
 
@@ -75,13 +78,35 @@ git push
 1. Open the Webflow custom-code page.
 2. Clear Head Code.
 3. Paste the full contents of `webflow-footer-inline-full.html` into Footer Code.
-4. Save.
-5. Publish to staging and production.
-6. Test with a cache-busting URL:
+4. Verify the pasted Footer Code:
+   - It starts with the `M45 Webflow-owned custom behaviour` comment.
+   - It contains one `<script>` tag.
+   - It contains the expected current change.
+   - It does not contain `github`, `g-yeo11`, or an external loader.
+5. If using the expanded editor, click `Save & Close`.
+6. Click the main Webflow `Save` button.
+7. Publish to staging and production.
+8. Test with a cache-busting URL:
 
 ```text
 https://www.m45capital.com/research-insights?verify=YYYYMMDDHHMM
 ```
+
+9. Confirm the live HTML:
+
+```powershell
+$html=(Invoke-WebRequest -Uri "https://www.m45capital.com/research-insights?verify=$([DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds())" -UseBasicParsing).Content
+[pscustomobject]@{
+  hasNav2 = ($html -match '20260707-nav2')
+  hasGithubLoader = ($html -match 'github|g-yeo11')
+  hasM45WayTeaser = ($html -match 'A short note on how we think about investing')
+} | ConvertTo-Json
+```
+
+Expected:
+
+- `hasGithubLoader` is `false`.
+- The marker for the changed feature is `true`.
 
 For Research & Insights, also test the Webflow Designer preview:
 
@@ -100,6 +125,24 @@ Note:
 - If pure Design mode shows old fallback cards, verify Preview before assuming production is broken.
 - If the static Designer fallback must match exactly, edit the native Webflow elements manually as a separate Designer task.
 
+## Codex Navigation Notes
+
+When Codex controls Webflow:
+
+- Inspect the visible DOM before clicking.
+- Re-inspect after every modal open, save, publish, or navigation event because Webflow node IDs change.
+- Treat `node_id` values as temporary and pass them as strings when using click helpers.
+- Keep the Webflow Custom Code page open until save and publish are confirmed.
+- Do not stop after pasting into the footer editor. The required sequence is:
+  1. Paste into Footer Code.
+  2. Verify the paste.
+  3. `Save & Close` the expanded editor.
+  4. Main Webflow `Save`.
+  5. Publish selected domains.
+  6. Verify production HTML and rendered page.
+
+If Codex stops working mid-change, follow the recovery checklist in `docs/CODEX_WEBFLOW_OPERATIONS.md`.
+
 ## Publishing A Webflow-Only Change
 
 1. Make the change in Webflow Designer or CMS.
@@ -117,6 +160,8 @@ If a script change is not visible:
 - Confirm Webflow was published.
 - Test with a query string on the page URL.
 - Hard refresh the browser.
+- Confirm the production HTML contains the expected markers.
+- Confirm the old GitHub loader is not present.
 
 ## Rollback
 
