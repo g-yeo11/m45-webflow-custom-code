@@ -1,4 +1,4 @@
-/* M45 Capital Partners Webflow custom behaviours. Webflow-owned inline bundle, 2026-07-07. */
+/* M45 Capital Partners Webflow custom behaviours. Webflow-owned inline bundle, 2026-07-08. */
 (function () {
   "use strict";
 
@@ -456,7 +456,16 @@
     if (!link || !/\.pdf(?:$|[?#])/i.test(link.href)) return;
     if (!isResearchContext()) return;
     if (isMobileWidth()) {
-      link.target = "_self";
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+      }
+      closePdfReader();
+      var nativeLink = document.createElement("a");
+      nativeLink.href = link.href;
+      nativeLink.target = "_self";
+      nativeLink.click();
       return;
     }
 

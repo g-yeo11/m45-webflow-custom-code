@@ -241,6 +241,7 @@ Mobile:
 
 - PDF should open natively, not in a small embedded frame.
 - Reason: native PDF gives sharper rendering and pinch zoom.
+- Featured and card-level paper links should behave the same way on mobile. `The M45 Way` should not open the desktop modal on a phone-width viewport.
 
 ## Whitepaper Share UI
 
@@ -292,4 +293,3 @@ If a page does not match:
 3. Prefer Webflow-native classes and interactions.
 4. Use small custom CSS only when Webflow's structure differs.
 5. Document the final decision in `CHANGELOG.md`.
-

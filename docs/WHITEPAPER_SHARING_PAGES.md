@@ -271,6 +271,7 @@ On the Research & Insights listing page:
 - `View PDF` should keep the current behaviour:
   - Desktop: opens modal reader
   - Mobile: opens native PDF directly
+- The featured `The M45 Way` link is part of this contract; do not let it keep a separate mobile/modal path from the other papers.
 - `Share` should share the paper's public landing page, not the PDF URL.
 
 On the paper detail page:
@@ -340,4 +341,3 @@ If previews still show the generic Research & Insights title:
 - Confirm the page was published.
 - Confirm the Open Graph image is reachable publicly.
 - Avoid relying on JavaScript to update metadata.
-

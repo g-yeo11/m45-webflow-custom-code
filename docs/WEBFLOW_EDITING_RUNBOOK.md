@@ -76,7 +76,7 @@ git push
 ## Publishing A Script Change
 
 1. Open the Webflow custom-code page.
-2. Clear Head Code.
+2. Clear Head Code, or leave only `<!-- M45 custom behaviour lives in Footer code. -->`.
 3. Paste the full contents of `webflow-footer-inline-full.html` into Footer Code.
 4. Verify the pasted Footer Code:
    - It starts with the `M45 Webflow-owned custom behaviour` comment.
@@ -97,9 +97,11 @@ https://www.m45capital.com/research-insights?verify=YYYYMMDDHHMM
 ```powershell
 $html=(Invoke-WebRequest -Uri "https://www.m45capital.com/research-insights?verify=$([DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds())" -UseBasicParsing).Content
 [pscustomobject]@{
+  hasHeadNote = ($html -match 'M45 custom behaviour lives in Footer code')
   hasNav2 = ($html -match '20260707-nav2')
   hasGithubLoader = ($html -match 'github|g-yeo11')
   hasM45WayTeaser = ($html -match 'A short note on how we think about investing')
+  hasMobilePdfNative = ($html -match 'nativeLink')
 } | ConvertTo-Json
 ```
 
@@ -107,6 +109,7 @@ Expected:
 
 - `hasGithubLoader` is `false`.
 - The marker for the changed feature is `true`.
+- `hasMobilePdfNative` is `true` after Research PDF behaviour changes.
 
 For Research & Insights, also test the Webflow Designer preview:
 
@@ -156,7 +159,7 @@ If Codex stops working mid-change, follow the recovery checklist in `docs/CODEX_
 If a script change is not visible:
 
 - Confirm Webflow Footer Code contains the current `webflow-footer-inline-full.html`.
-- Confirm Webflow Head Code is empty.
+- Confirm Webflow Head Code is empty or note-only, with no scripts or loaders.
 - Confirm Webflow was published.
 - Test with a query string on the page URL.
 - Hard refresh the browser.

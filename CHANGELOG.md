@@ -11,6 +11,47 @@ Use reverse chronological order. Each entry should include:
 - Verification performed
 - Follow-ups or risks
 
+## 2026-07-08
+
+### Forced mobile Research PDFs to native handling
+
+Summary:
+
+- Updated Research & Insights PDF handling so mobile taps cancel the desktop embedded reader path and trigger a clean native PDF link action.
+- Fixed the featured `The M45 Way` mobile `View PDF` link, which was opening the desktop reader while the other document cards opened natively.
+- Cleaned Webflow global custom code so Head Code contains only a harmless note and Footer Code contains the single inline behaviour payload.
+- Documented the duplicate Head/Footer script failure mode and Webflow paste-verification workflow.
+
+Files changed:
+
+- `m45-site.js`
+- `webflow-footer-inline-full.html`
+- `README.md`
+- `CHANGELOG.md`
+- `docs/AI_AGENT_HANDOFF.md`
+- `docs/CODEX_WEBFLOW_OPERATIONS.md`
+- `docs/CUSTOM_CODE_REFERENCE.md`
+- `docs/QA_CHECKLIST.md`
+- `docs/RESEARCH_INSIGHTS.md`
+- `docs/SITE_ARCHITECTURE.md`
+- `docs/VISUAL_STYLE_AND_ANIMATIONS.md`
+- `docs/WEBFLOW_EDITING_RUNBOOK.md`
+- `docs/WHITEPAPER_SHARING_PAGES.md`
+
+Webflow actions:
+
+- Set Head Code to `<!-- M45 custom behaviour lives in Footer code. -->`.
+- Replaced Footer Code with regenerated `webflow-footer-inline-full.html`.
+- Saved Webflow custom code.
+- Published staging and production.
+
+Verification:
+
+- Ran `node --check m45-site.js`.
+- Confirmed production HTML contains one `mobile-pdf-native` marker and one custom behaviour script.
+- Confirmed production HTML has the Head Code note, includes `nativeLink`, does not include the old mobile PDF branch, and has no GitHub loader.
+- Verified at 393px mobile viewport that tapping featured `The M45 Way` triggers the native PDF action/download and `.ri-pdf-reader` does not open.
+
 ## 2026-07-07
 
 ### Added client portal integration groundwork

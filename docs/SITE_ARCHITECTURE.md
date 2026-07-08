@@ -32,7 +32,7 @@ Production runs the inline payload pasted into the Webflow global Footer Code fi
 webflow-footer-inline-full.html
 ```
 
-Webflow global Head Code should remain empty.
+Webflow global Head Code should remain empty or contain only the harmless note `<!-- M45 custom behaviour lives in Footer code. -->`. It must not contain scripts or loaders.
 
 ## Main Pages
 

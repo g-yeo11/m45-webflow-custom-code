@@ -173,6 +173,7 @@ Mobile:
 
 - PDF links open the native PDF file directly.
 - This is intentional because native mobile PDF viewing supports sharper rendering and pinch zoom.
+- This includes the featured `The M45 Way` link. If it opens the desktop modal on mobile, check for duplicate Head/Footer scripts and confirm the mobile handler cancels the modal path before triggering the native link.
 
 ## Sharing Behaviour
 

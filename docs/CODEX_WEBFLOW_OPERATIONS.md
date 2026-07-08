@@ -10,7 +10,8 @@ Webflow owns the live site. This repository owns the custom-code source and docu
 
 Current live-code model:
 
-- Webflow Head Code should be empty.
+- Webflow Head Code should be empty or contain only `<!-- M45 custom behaviour lives in Footer code. -->`.
+- Webflow Head Code must not contain a script, GitHub loader, or duplicate footer payload.
 - Webflow global Footer Code should contain the full inline payload from `webflow-footer-inline-full.html`.
 - `m45-site.js` is the source file to edit.
 - `webflow-footer-inline-full.html` is the generated paste payload.
@@ -27,7 +28,7 @@ We are editing the M45 Capital Partners Webflow site.
 Repo: C:\Users\gordo\Documents\Codex\2026-07-01\are\work\m45-webflow-custom-code
 Read README.md, CHANGELOG.md, docs/AI_AGENT_HANDOFF.md, docs/CODEX_WEBFLOW_OPERATIONS.md, and docs/WEBFLOW_EDITING_RUNBOOK.md first.
 Live custom code is pasted directly into Webflow Footer Code from webflow-footer-inline-full.html.
-Head Code must stay empty.
+Head Code must stay empty or contain only the harmless footer-code note.
 Use What We Do as the visual and animation reference page.
 Verify on production with cache-busting URLs after publishing.
 ```
@@ -90,7 +91,13 @@ Set-Content -LiteralPath (Join-Path $repo 'webflow-footer-inline-full.html') -Va
 https://webflow.com/dashboard/sites/m45capital/custom-code
 ```
 
-6. Clear Head Code. It should be empty.
+6. Clear Head Code, or leave only:
+
+```html
+<!-- M45 custom behaviour lives in Footer code. -->
+```
+
+It should contain no scripts, loaders, or duplicate footer payload.
 
 7. Expand Footer Code editor.
 
@@ -120,10 +127,12 @@ Use this after publishing:
 ```powershell
 $html=(Invoke-WebRequest -Uri "https://www.m45capital.com/research-insights?verify=$([DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds())" -UseBasicParsing).Content
 [pscustomobject]@{
+  hasHeadNote = ($html -match 'M45 custom behaviour lives in Footer code')
   hasNav2 = ($html -match '20260707-nav2')
   hasGithubLoader = ($html -match 'github|g-yeo11')
   hasResearchCanonical = ($html -match 'm45-research-canonical')
   hasM45WayTeaser = ($html -match 'A short note on how we think about investing')
+  hasMobilePdfNative = ($html -match 'nativeLink')
 } | ConvertTo-Json
 ```
 
@@ -131,6 +140,7 @@ Expected:
 
 - `hasGithubLoader` should be `false`.
 - The relevant markers for the change should be `true`.
+- `hasMobilePdfNative` should be `true` after Research PDF changes.
 
 ## Automated Browser Verification
 
@@ -175,15 +185,31 @@ Likely causes:
 - Site was saved but not published.
 - Browser cache is showing the old page.
 - Code was pasted into the wrong field.
-- Head Code still contains an old loader.
+- Head Code still contains an old loader or a duplicate copy of the footer payload.
 
 Mitigation:
 
 - Confirm Footer Code contains the latest payload.
-- Confirm Head Code is empty.
+- Confirm Head Code is empty or note-only.
 - Publish staging and production.
 - Test with a cache-busting query string.
 - Inspect production HTML for markers.
+
+### Webflow custom code is duplicated in Head and Footer
+
+Likely causes:
+
+- The full payload was accidentally pasted into Head Code.
+- Webflow's code editor focus moved to the wrong editor after a save, modal, or scroll.
+- A stale GitHub loader was left in Head Code while the inline footer payload was also active.
+
+Mitigation:
+
+- Set Head Code to empty or `<!-- M45 custom behaviour lives in Footer code. -->`.
+- Paste the full `webflow-footer-inline-full.html` payload into Footer Code only.
+- Before saving, use select-all/copy on the active editor and verify the clipboard contents are the intended field.
+- After publishing, inspect production HTML for one custom behaviour script, no GitHub loader, and the latest marker.
+- If Webflow keeps focusing the wrong editor, click inside the lower Footer Code editor by coordinates, then verify with clipboard readback before saving.
 
 ### Webflow preview looks different from production
 
@@ -268,11 +294,15 @@ Mitigation:
 Likely causes:
 
 - Embedded PDF iframe is being used on mobile.
+- A desktop modal click handler is still winning before the mobile native branch.
+- Duplicate Head/Footer scripts are competing.
 
 Mitigation:
 
 - Keep mobile PDF links opening directly in the native browser PDF viewer.
 - Use the desktop modal only for desktop.
+- For `The M45 Way`, verify mobile taps do not open `.ri-pdf-reader`.
+- Confirm production HTML contains `nativeLink` and does not contain the old mobile branch that only set `link.target = "_self"`.
 
 ### LinkedIn or WhatsApp preview is generic
 
@@ -330,4 +360,3 @@ If the user says "exact", measure the layout rather than judging by eye only.
 7. Verify the visual symptom with a cache-busting URL.
 
 Do not assume the last step completed just because the repo changed or Webflow editor was open.
-

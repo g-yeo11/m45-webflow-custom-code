@@ -18,7 +18,7 @@ Webflow footer payload:
 C:\Users\gordo\Documents\Codex\2026-07-01\are\work\m45-webflow-custom-code\webflow-footer-inline-full.html
 ```
 
-Webflow Head Code should be empty. Webflow Footer Code should contain the full contents of `webflow-footer-inline-full.html`.
+Webflow Head Code should be empty or contain only `<!-- M45 custom behaviour lives in Footer code. -->`. It must not contain a script, GitHub loader, or duplicate footer payload. Webflow Footer Code should contain the full contents of `webflow-footer-inline-full.html`.
 
 The Webflow project setting `Run custom code in Preview` should remain on. Otherwise, Webflow's own site preview can look different from production and may show stale native fallback content instead of the canonical custom-code-rendered Research & Insights page.
 
@@ -83,6 +83,7 @@ Responsibilities:
 
 - On mobile, PDF links open directly in the browser's native PDF viewer.
 - This preserves pinch zoom and clearer rendering on mobile.
+- The mobile handler must cancel the desktop modal path before triggering the native link. This is especially important for the featured `The M45 Way` link because it shares the same desktop modal bindings.
 
 Reason:
 

@@ -39,8 +39,10 @@ Canonical source files:
 Head Code:
 
 ```html
-<!-- empty -->
+<!-- M45 custom behaviour lives in Footer code. -->
 ```
+
+Head Code may also be empty. It must not contain any `<script>` tag, GitHub loader, or duplicate copy of the footer payload.
 
 Footer Code:
 
@@ -56,7 +58,7 @@ The footer payload is generated from `m45-site.js` and should contain one `<scri
 2. Regenerate `webflow-footer-inline-full.html`.
 3. Run JavaScript syntax checks on `m45-site.js`.
 4. Paste `webflow-footer-inline-full.html` into Webflow global Footer Code.
-5. Clear Webflow Head Code.
+5. Clear Webflow Head Code, or leave only the harmless note shown above.
 6. Save and publish Webflow to staging and production.
 7. Run the desktop and mobile QA checklist.
 8. Add a dated entry to [CHANGELOG.md](CHANGELOG.md).

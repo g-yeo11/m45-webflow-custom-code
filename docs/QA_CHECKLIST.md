@@ -118,6 +118,7 @@ Mobile:
 - Filters are usable and do not overflow awkwardly.
 - `View PDF` opens the native PDF directly.
 - Native PDF can be scrolled and pinch-zoomed.
+- Featured `The M45 Way` does not open `.ri-pdf-reader` on mobile.
 - Share opens native share sheet where supported.
 
 Designer/Preview:
@@ -130,7 +131,8 @@ Designer/Preview:
 
 After changing `m45-site.js` and publishing:
 
-- Webflow Head Code is empty.
+- Webflow Head Code is empty or contains only `<!-- M45 custom behaviour lives in Footer code. -->`.
+- Webflow Head Code contains no `<script>`, GitHub loader, or duplicate footer payload.
 - Webflow Footer Code contains the inline `webflow-footer-inline-full.html` payload.
 - Footer Code contains one `<script>` tag.
 - Footer Code does not contain `github` or `g-yeo11`.
