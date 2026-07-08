@@ -13,6 +13,29 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-07-08
 
+### Added Codex Web handoff instructions
+
+Summary:
+
+- Added a repo-level `AGENTS.md` so Codex Web, Codex desktop, and other coding agents have persistent project instructions.
+- Added a dedicated Codex Web handoff guide with the startup prompt, Webflow publishing boundary, and cross-machine workflow.
+- Linked the Codex Web handoff guide from the README.
+
+Files changed:
+
+- `AGENTS.md`
+- `README.md`
+- `CHANGELOG.md`
+- `docs/CODEX_WEB_HANDOFF.md`
+
+Webflow actions:
+
+- None. Documentation-only change.
+
+Verification:
+
+- Confirmed repo was clean before adding the handoff files.
+
 ### Forced mobile Research PDFs to native handling
 
 Summary:

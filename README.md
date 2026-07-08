@@ -31,8 +31,15 @@ Canonical source files:
 - [Client Portal Integration Plan](docs/CLIENT_PORTAL_INTEGRATION.md)
 - [Webflow Editing Runbook](docs/WEBFLOW_EDITING_RUNBOOK.md)
 - [Codex Webflow Operations Guide](docs/CODEX_WEBFLOW_OPERATIONS.md)
+- [Codex Web Handoff Guide](docs/CODEX_WEB_HANDOFF.md)
 - [QA Checklist](docs/QA_CHECKLIST.md)
 - [AI Agent Handoff Notes](docs/AI_AGENT_HANDOFF.md)
+
+## Codex Web / Other Machines
+
+Use this GitHub repository as the portable handoff point for Codex Web and other machines. New Codex tasks should read [AGENTS.md](AGENTS.md) first, then follow [Codex Web Handoff Guide](docs/CODEX_WEB_HANDOFF.md).
+
+Codex Web can edit the repo and prepare the Webflow footer payload, but publishing still requires a logged-in Webflow session.
 
 ## Current Webflow Custom Code Contract
 
