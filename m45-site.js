@@ -627,10 +627,30 @@
     });
   }
 
+  function alignLeadershipTabs() {
+    if (pathName() !== "/our-leadership" && !document.querySelector(".lds-tabmenu")) return;
+
+    // Share the available row height, including space for wrapped names and titles.
+    injectStyle(
+      "m45-leadership-alignment-20260912",
+      [
+        "@media(min-width:768px){",
+        ".lds-tabmenu{align-items:stretch}",
+        ".lds-tabmenu .lds-tablink{display:flex;height:auto}",
+        ".lds-tabmenu .lds-tablinkdiv{display:flex;flex-direction:column;width:100%}",
+        ".lds-tabmenu .lds-title-h6{min-height:2lh}",
+        ".lds-tabmenu .lds-tabovolabel{margin-top:auto;min-height:calc(2lh + 12px)}",
+        ".lds-tabmenu .lds-category-start::before{top:-38px;width:calc(100% - 24px);white-space:normal;line-height:1.4}",
+        "}",
+      ].join("")
+    );
+  }
+
   function run() {
     normalizeNav();
     patchMapLinks();
     fixMobileMenuArrows();
+    alignLeadershipTabs();
     renderResearchPage();
   }
 

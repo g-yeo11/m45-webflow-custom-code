@@ -87,6 +87,9 @@ Desktop and mobile:
 - Leland appears last.
 - Other leaders are ordered alphabetically inside their categories.
 - Category separation is subtle and clean.
+- Desktop tab bottom borders align at the same height after names and titles wrap.
+- Category labels do not overlap adjacent categories at laptop widths.
+- Grace Zhang is listed under Operations as Executive Director.
 
 ## Research & Insights
 

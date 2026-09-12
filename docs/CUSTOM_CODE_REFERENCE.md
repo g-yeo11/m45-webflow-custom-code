@@ -34,6 +34,17 @@ For Codex-assisted Webflow navigation, paste verification, save/publish sequenci
 
 The Research & Insights renderer and all global nav normalization live inside this single script. Avoid adding a second recovery script in Webflow; regenerate and paste the full footer payload instead.
 
+### Leadership tab alignment
+
+Runs on `/our-leadership` or pages containing `.lds-tabmenu`.
+
+- `alignLeadershipTabs()` installs the `m45-leadership-alignment-20260912` stylesheet.
+- Desktop tabs share their row height so the bottom divider lines align even when names and titles wrap.
+- Name and title blocks reserve two lines; category labels can wrap within their own tab instead of overlapping the next category.
+- The rules apply above 767px and leave the mobile leadership cards unchanged.
+- Leadership names, titles, roles, and biographies remain Webflow `Leaderships` CMS fields.
+- The existing page-specific footer script controls category ordering separately from this global layout stylesheet. Preserve Grace before Yvett in Operations, Jason first, and Leland last.
+
 ### Research document taxonomy and featured document
 
 Runs on:

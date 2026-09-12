@@ -11,6 +11,44 @@ Use reverse chronological order. Each entry should include:
 - Verification performed
 - Follow-ups or risks
 
+## 2026-09-12
+
+### Aligned leadership dividers and corrected Grace Zhang's title
+
+Summary:
+
+- Added equal-height leadership tabs so all lower divider lines align and category labels wrap without overlapping.
+- Changed Grace Zhang's CMS title from Managing Director to Executive Director, remaining under Operations with the existing biography and no headshot.
+
+Files changed:
+
+- `m45-site.js`
+- `webflow-footer-inline-full.html`
+- `docs/CUSTOM_CODE_REFERENCE.md`
+- `docs/QA_CHECKLIST.md`
+- `CHANGELOG.md`
+
+Webflow actions:
+
+- Updated and published Grace Zhang's existing Leaderships CMS item.
+- Replaced global Footer Code with the generated payload, verified the full paste, and saved.
+- Preserved the note-only global Head Code and the existing page-specific category ordering.
+- Published staging and production.
+
+Verification:
+
+- Confirmed the existing production global script matches the repository source after normalizing line endings.
+- Published production confirmed all eight tab borders share an identical vertical position at 1280px and 1440px.
+- Confirmed Grace's Executive Director title in production desktop tabs and mobile cards; her mobile biography accordion opens.
+- Confirmed staging contains the alignment change and Grace's updated title.
+- Confirmed the published global bundle exactly matches the source after normalizing line endings, with one global bundle and no GitHub loader.
+- Checked main-page navigation and the desktop Research PDF modal.
+- JavaScript syntax and whitespace checks passed.
+
+Verification limitation:
+
+- The featured mobile PDF action attempted direct navigation to the PDF CDN, but browser site-safety policy blocked loading the PDF. Its contents were not inspected, and no workaround was attempted.
+
 ## 2026-07-08
 
 ### Added Codex Web handoff instructions
