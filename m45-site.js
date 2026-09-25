@@ -21,6 +21,17 @@
         "https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a47340002795540f3ec82d7_2026%2006%20-%20The%20M45%20Way%2C%20responsible%20for%20the%20whole%20(M45%20Fundamental%20Research).pdf",
     },
     {
+      type: "Whitepapers",
+      slug: "neoclouds-and-the-business-behind-ai",
+      pagePath: "/research-insights?paper=neoclouds-and-the-business-behind-ai",
+      title: "Neoclouds and the Business Behind AI",
+      summary:
+        "Every AI answer comes with a computing bill. We want to understand who earns that income, who pays for the equipment and what remains for shareholders.",
+      month: "September 2026",
+      pdfUrl:
+        "https://cdn.prod.website-files.com/67343f335cb71da254f99401/6ab5dbad190608bdb7b4f584_2026%2009%20-%20Neoclouds%20and%20the%20Business%20Behind%20AI%20(M45%20Fundamental%20Research).pdf",
+    },
+    {
       type: "Value-Chain",
       slug: "global-luxury",
       pagePath: "/global-luxury",

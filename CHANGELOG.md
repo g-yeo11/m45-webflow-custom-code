@@ -11,6 +11,41 @@ Use reverse chronological order. Each entry should include:
 - Verification performed
 - Follow-ups or risks
 
+## 2026-09-25
+
+### Published Neoclouds and the Business Behind AI
+
+Summary:
+
+- Uploaded the approved September whitepaper PDF to Webflow Assets and added it under Whitepapers in Research & Insights.
+- Used the paper's approved opening for its card introduction; retained The M45 Way as the featured paper.
+- Used the existing `?paper=neoclouds-and-the-business-behind-ai` reader/share route. No new standalone landing page or social metadata was created.
+- Retained the existing public-whitepaper disclaimer, as requested by the owner.
+
+Files changed:
+
+- `m45-site.js`
+- `webflow-footer-inline-full.html`
+- `docs/RESEARCH_INSIGHTS.md`
+- `CHANGELOG.md`
+
+Webflow actions:
+
+- Uploaded the final 364,538-byte PDF; local SHA256 `fb9f012dd1c88bbb22f15dcd4947f02af78f4cd7397ba13c268c3c9360079e98`.
+- Updated the full global Footer Code, verified the clipboard readback, clicked Save & Close and the main Save, then published staging and production.
+- Preserved the note-only Head Code and all existing page behaviour.
+
+Verification:
+
+- Confirmed staging and production return HTTP 200 and contain exactly one global bundle, matching the repository source after whitespace normalization, with the new publish marker and no old GitHub loader.
+- Checked the live title, September 2026 date, introduction, PDF href and share destinations.
+- Visually reviewed the new card at desktop and 393px phone width, and checked the Whitepapers filter.
+- JavaScript syntax, generated-payload/source agreement and Git whitespace checks passed.
+
+Verification limitation:
+
+- The browser safety policy blocked inspecting the hosted PDF. Upload completion and the link were verified, but the hosted PDF contents and PDF-reader behaviour were not re-tested. No alternate access path was attempted.
+
 ## 2026-09-12
 
 ### Aligned leadership dividers and corrected Grace Zhang's title
