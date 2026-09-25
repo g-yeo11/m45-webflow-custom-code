@@ -13,6 +13,15 @@ Use reverse chronological order. Each entry should include:
 
 ## 2026-09-25
 
+### Reclassified Neoclouds as Value-Chain research
+
+- Changed `Neoclouds and the Business Behind AI` from `Whitepapers` to `Value-Chain`, as requested by the owner.
+- Kept the title, introduction, PDF, share route and featured document unchanged.
+- Updated `m45-site.js`, `webflow-footer-inline-full.html` and `docs/RESEARCH_INSIGHTS.md`.
+- Verified the complete Footer Code readback, saved and published staging and production.
+- Confirmed the live Value-Chain filter includes Neoclouds and the Whitepapers filter excludes it.
+- Both published sites return HTTP 200 with one bundle matching the repository source and no old loader. JavaScript syntax, source/footer agreement and whitespace checks passed.
+
 ### Published Neoclouds and the Business Behind AI
 
 Summary:

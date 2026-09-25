@@ -21,7 +21,7 @@
         "https://cdn.prod.website-files.com/67343f335cb71da254f99401/6a47340002795540f3ec82d7_2026%2006%20-%20The%20M45%20Way%2C%20responsible%20for%20the%20whole%20(M45%20Fundamental%20Research).pdf",
     },
     {
-      type: "Whitepapers",
+      type: "Value-Chain",
       slug: "neoclouds-and-the-business-behind-ai",
       pagePath: "/research-insights?paper=neoclouds-and-the-business-behind-ai",
       title: "Neoclouds and the Business Behind AI",

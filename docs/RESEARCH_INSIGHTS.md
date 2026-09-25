@@ -22,7 +22,7 @@ Current filters:
 
 ### Neoclouds and the Business Behind AI
 
-Category: `Whitepapers`. Month: September 2026. Added to the library; `The M45 Way` remains the featured paper.
+Category: `Value-Chain`. Month: September 2026. Added to the library; `The M45 Way` remains the featured paper.
 
 PDF:
 
